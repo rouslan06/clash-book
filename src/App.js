@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Error404 from "./components/Error404/Error404";
+import Error404 from "./Component/Error404/Error404";
 import Page1 from "./Pages/Page1/Page1";
 import Page2 from "./Pages/Page2/Page2";
 import Page3 from "./Pages/Page3/Page3";
 import Page4 from "./Pages/Page4/Page4";
-import Footer from "./components/Footer/Footer";
+import Footer from "./Component/Footer/Footer";
 
 import "./App.css";
 

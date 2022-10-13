@@ -1,7 +1,7 @@
-import Menu from "../../components/Menu/Menu";
+import Menu from "../../Component/Menu/Menu";
 import "./Page1.css";
 import { useEffect, useState } from "react";
-import Article from "../../components/Article/Article";
+import Article from "../../Component/Article/Article";
 
 /**
  * Composant qui affiche la page d'accueil
@@ -48,7 +48,8 @@ function Page1(){
         <div>
             <Menu />
             <div id="Page1">
-                <h1>Bienvenue sur Bocal Actus</h1>
+                <h1 id="titre">CLash Book</h1>
+                <h1>Page de Rouslan</h1>
                 <h2>Nous sommes un groupe d'étudients qui créons une application révolutionnaire.</h2>
                 <p>Liste des articles</p>
                 <ul>

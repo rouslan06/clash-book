@@ -3,3 +3,7 @@ footer{
     min-height:50px; 
     background:PapayaWhip;
 }
+
+#footer{
+    text-align: center;
+}
