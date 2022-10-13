@@ -1,3 +1,102 @@
 #Page3{
     flex: 1;
 }
+
+#postStyle{
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+input{
+    border-left-style: none;
+    border-top-style: none;
+    border-right-style: none;
+}
+
+.buttonPreview{
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #eeeeee;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: #599ac8;
+    padding: 15px 50px;
+    margin: 0 auto;
+}
+
+.buttonPreview:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 470%;
+    width: 140%;
+    background: #0c3872;
+    color: #eeeeee;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: translateX(-100%) translateY(-25%) rotate(45deg);
+    transform: translateX(-100%) translateY(-25%) rotate(45deg);
+}
+
+.buttonPreview:hover:after{
+    color: #eeeeee;
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+textarea{
+    justify-content: center;
+    margin: 15px;
+    padding-bottom: 70px;
+}
+
+.buttonSubmit{
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #eeeeee;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: #599ac8;
+    padding: 15px 50px;
+    margin: 0 auto;
+}
+
+.buttonSubmit:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 470%;
+    width: 140%;
+    background: #0c3872;
+    color: #eeeeee;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: translateX(-100%) translateY(-25%) rotate(45deg);
+    transform: translateX(-100%) translateY(-25%) rotate(45deg);
+}
+
+.buttonSubmit:hover:after{
+    color: #eeeeee;
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
