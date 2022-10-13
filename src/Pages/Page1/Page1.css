@@ -1,13 +1,26 @@
-#Page1{
+#Actus {
     flex: 1;
 }
 
-#Page1 ul{
+#Actus ul {
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
 }
 
-#titre{
+#titre {
     text-align: center;
+}
+
+#Actus li:hover {
+    background-color: rgb(110, 180, 208);
+}
+
+#Actus li {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#enTete {
+    border: 2px solid black
 }

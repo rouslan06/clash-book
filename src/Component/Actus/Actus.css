@@ -1,0 +1,54 @@
+.Actus {
+    width: 400px;
+    border: 1px solid black;
+    padding: 0 10px;
+    margin: 20px;
+}
+
+#Boutons {
+    margin-left: 120px;
+    margin-bottom: 15px;
+}
+
+#Commentaire {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 30px;
+}
+
+#Like {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 30px;
+}
+
+#Dislike {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+#Commentaire:hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 30px;
+    background-color: green;
+}
+
+#Like:hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 30px;
+    background-color: green;
+}
+
+#Dislike:hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: green;
+}
