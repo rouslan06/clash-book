@@ -1,0 +1,9 @@
+#Page1{
+    flex: 1;
+}
+
+#Page1 ul{
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
