@@ -2,8 +2,7 @@
     display: inline-block;
     border: 1px solid black;
     padding: 2em;
-    background-color: #850606;
-    border-radius: 2rem;
+    background-color: rgb(179, 205, 215);
 }
 
 form {
