@@ -1,14 +1,11 @@
 
+/* possibilité de le supprimer, ne semble pas avoir d'impact sur le reste de la page 3 à vérifier tout de même !!! */
+
 export const isEmpty = (value) => {
     return ( 
         value = undefined || value == null
     );
 };
-
-
-
-
-
 
 
 
