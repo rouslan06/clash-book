@@ -4,6 +4,7 @@
     margin-bottom: 12px;
     background-color: white;
     display: flex;
+    margin-left: -36px;
 }
 
 #BlocCom:hover {
@@ -36,13 +37,14 @@
 }
 
 #Com {
+    margin-top: 18px;
     margin-left: 10px;
     width: 180px;
 }
 
 #lesLikes {
     position: relative;
-    margin-top: 8px;
+    margin-top: 12px;
     margin-left: 45px;
     display: flex;
     border: 3px solid rgb(210, 165, 52);

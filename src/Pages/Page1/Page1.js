@@ -53,7 +53,7 @@ function Page1(){
                     <h1>Page de Rouslan</h1>
                     <h2>Liste des actus</h2>
                 </div>
-                <ul>
+                <ul id='LesPosts'>
                     {articles.map((article, index) => <Actus
                     key={index} 
                     title={article.title}
