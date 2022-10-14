@@ -21,11 +21,11 @@ function Actus({ title, description }){
             <h3>{title}</h3>
             <p>{description}</p>
             <div id="Boutons">
-                <button id="Commentaire">#</button>
+                <button id="Commentaire" onClick="">#</button>
                 <div id="lesLikes">
-                    <button id="Like" onClick={() => updateCount("increment")}>+1</button>
-                    <p id="likeTotal">{count} Likes</p>
-                    <button id="Dislike" onClick={() => updateCount("decrement")}>-1</button>
+                    <button id="Like" onClick={() => updateCount("increment")}>👍</button>
+                    <p id="likeTotal">{count} ❤️</p>
+                    <button id="Dislike" onClick={() => updateCount("decrement")}>👎</button>
                 </div>
             </div>
         </li>
