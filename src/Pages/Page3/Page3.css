@@ -2,10 +2,11 @@
     flex: 1;
 }
 
-#postStyle{
-    padding: 0 10px;
+.postStyle{
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 10em;
+    margin-right: 10em;
 }
 
 h1{
@@ -13,90 +14,112 @@ h1{
     text-transform: uppercase;
 }
 
-input{
-    border-left-style: none;
-    border-top-style: none;
-    border-right-style: none;
-}
-
-.buttonPreview{
-    border: none;
-    display: block;
-    text-align: center;
-    cursor: pointer;
-    text-transform: uppercase;
-    outline: none;
-    overflow: hidden;
-    position: relative;
-    color: #eeeeee;
-    font-weight: 600;
-    font-size: 15px;
-    background-color: #599ac8;
-    padding: 15px 50px;
-    margin: 0 auto;
-}
-
-.buttonPreview:after{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 470%;
-    width: 140%;
-    background: #0c3872;
-    color: #eeeeee;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    -webkit-transform: translateX(-100%) translateY(-25%) rotate(45deg);
-    transform: translateX(-100%) translateY(-25%) rotate(45deg);
-}
-
-.buttonPreview:hover:after{
-    color: #eeeeee;
-    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
-    transform: translateX(-9%) translateY(-25%) rotate(45deg);
-}
-
 textarea{
-    justify-content: center;
     margin: 15px;
-    padding-bottom: 70px;
-}
-
-.buttonSubmit{
     border: none;
-    display: block;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px #0000002e;
+    width: 699px;
+    height: 28px;
+    padding: 2em;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+.send{
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+
+.send:hover{
+    background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.send:active{
+  transform: scale(0.95);
+}
+
+.send{
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #5e8bd1;
+  background-image: linear-gradient(45deg, #351C9C 0%, #5e8bd1 50%, #351C9C 100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+
+.send:hover{
+    background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.send:active{
+    transform: scale(0.95);
+}
+
+.cancel{
+    margin: 10px;
+    padding: 15px 30px;
     text-align: center;
-    cursor: pointer;
     text-transform: uppercase;
-    outline: none;
-    overflow: hidden;
-    position: relative;
-    color: #eeeeee;
-    font-weight: 600;
-    font-size: 15px;
-    background-color: #599ac8;
-    padding: 15px 50px;
-    margin: 0 auto;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #5e8bd1;
+    background-image: linear-gradient(45deg, #351C9C 0%, #5e8bd1 50%, #351C9C 100%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
-
-.buttonSubmit:after{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 470%;
-    width: 140%;
-    background: #0c3872;
-    color: #eeeeee;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    -webkit-transform: translateX(-100%) translateY(-25%) rotate(45deg);
-    transform: translateX(-100%) translateY(-25%) rotate(45deg);
+    
+.cancel:hover{
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
-
-.buttonSubmit:hover:after{
-    color: #eeeeee;
-    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
-    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    
+.cancel:active{
+    transform: scale(0.95);
 }

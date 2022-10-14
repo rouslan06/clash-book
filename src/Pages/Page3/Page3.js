@@ -1,46 +1,61 @@
 import Menu from "../../Component/Menu/Menu";
-import {useState} from  'react';
-// import ReactDom from 'react-dom/client';
+import { useState } from 'react';
 import "./Page3.css";
 
 
 function Page3() {
-  const [title, setTitle] = useState("")
+  /*pour afficher le post */
+  const [message, setMessage] = useState("");
 
-  /* a travailler l'envoie de la creation page 3 */
+  /*pour envoyer un ficher img */
+  const [postPicture, setPostPicture] = useState(null);
 
+  /*pour envoyer un fichier video (non créé) */
+  const [video, setVideo] = useState('');
+  const [file, setFile] = useState();
 
-  // requetePost () {
-  //   axios.post(/*Paramètre de la requête POST*/)
-  //     .then(() => this.setState({ redirection: true }));
-  // }
+  // const handlePicture = () => {
+  // };
 
-
-  // render () {
-  //   const { redirection } = this.state;
-  //   if (redirection) {
-  //    //Affichage de la redirection
-  //    return <Redirect to='/mon-url'/>;
-  // }
+  const handlePost = () => {};
+  const cancetPost = () => {};
 
   return (
     <div>
       <Menu />
       <div id="Page3">
-        <h1>Create a new post</h1>
-        
-        <form id="postStyle">
-          <label>Enter your Title :
-            <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
-          </label>
-          <button type="button" className="buttonPreview">PREVIEW</button>
+        <h1>CREATE A NEW POST</h1>
+        <div className="postStyle">
 
-              <textarea> </textarea>
-            <button type="button" className="buttonSubmit">SUBMIT</button>
-        </form>
-   
+          <form>
+            <div className="postForm">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="mess"
+                onChange={(e) => setMessage(e.target.value)}
+                value="Balance ton clash !"
+              />
+
+              <div className="footerForm">
+
+                <form action="/action_page.php">
+                  <input type="file" id="myFile" name="filename" />
+                </form>
+
+                <div className="btn">
+                  <button className="cancel" onClick={cancetPost}>Annul le clash</button>
+                  <button className="send" onClick={handlePost}>Envoie ton clash</button>
+                </div>
+
+              </div>
+            </div>
+
+          </form>
+        </div>
       </div>
     </div>
+
   );
 }
 
