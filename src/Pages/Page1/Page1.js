@@ -1,7 +1,7 @@
 import Menu from "../../Component/Menu/Menu";
 import "./Page1.css";
 import { useEffect, useState } from "react";
-import Article from "../../Component/Article/Article";
+import Actus from "../../Component/Actus/Actus";
 
 /**
  * Composant qui affiche la page d'accueil
@@ -47,13 +47,14 @@ function Page1(){
     return(
         <div>
             <Menu />
-            <div id="Page1">
-                <h1 id="titre">CLash Book</h1>
-                <h1>Page de Rouslan</h1>
-                <h2>Nous sommes un groupe d'étudients qui créons une application révolutionnaire.</h2>
-                <p>Liste des articles</p>
+            <div id="Actus">
+                <h1 id="titre">Clash Book</h1>
+                <div id="enTete">
+                    <h1>Page de Rouslan</h1>
+                    <h2>Liste des actus</h2>
+                </div>
                 <ul>
-                    {articles.map((article, index) => <Article 
+                    {articles.map((article, index) => <Actus
                     key={index} 
                     title={article.title}
                     description={article.description}
