@@ -36,6 +36,7 @@ function Register(){
     function handleSubmit(e){
         e.preventDefault();
         console.log(fisrtName, lastName, email, password);
+        addUser();
     }
 
     async function addUser(){
@@ -47,6 +48,9 @@ function Register(){
 
             body: JSON.stringify({
                 fisrtname: fisrtName,
+                lastname: lastName,
+                email: email,
+                password: password
             }),
 
         }
@@ -58,7 +62,7 @@ function Register(){
         console.log(data);
     }
 
-    addUser();
+    
 
     return (
         <div className="form">
@@ -102,7 +106,7 @@ function Register(){
                 <input 
                     id="submit" 
                     type="submit"
-                    value="Sign in"
+                    value="Nouveau clasher"
                 />          
             </form>
         </div>
