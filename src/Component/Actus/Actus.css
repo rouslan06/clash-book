@@ -3,14 +3,11 @@
     border: 1px solid black;
     padding: 0 10px;
     margin: 20px;
-}
-
-.Actus:hover {
     background-color: rgb(179, 205, 215);
 }
 
 #Boutons {
-    margin-left: 20px;
+    margin-left: 32px;
     margin-bottom: 15px;
     display: flex;
 }
@@ -53,7 +50,7 @@
 }
 
 #likeTotal {
-    width: 100px;
+    width: 60px;
     height: 24px;
     text-align: center;
     margin-top: 0px;
@@ -68,7 +65,7 @@
     height: 30px;
     border-radius: 18px 18px 18px 18px;
     background-color: white;
-    margin-left: 15px;
+    margin-left: 25px;
 }
 
 #SectionAjout {
@@ -92,6 +89,6 @@
 #colonneCom {
     display: flex;
     flex-direction: column;
-    margin-left: -35px;
+    margin-left: -40px;
     margin-bottom: 2px;
 }

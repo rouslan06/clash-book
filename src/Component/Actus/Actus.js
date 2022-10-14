@@ -54,10 +54,10 @@ function Actus({ title, description}){
             <h3>{title}</h3>
             <p>{description}</p>
             <div id="Boutons">
-            <div id="SectionAjout">  
-                <button id="addCom" onClick={addTask}>#</button>
-                <input id="Commentaire" onChange={inputChange} value={newTask} placeholder="Trash talkez"></input>
-            </div>
+                <div id="SectionAjout">  
+                    <button id="addCom" onClick={addTask}>#</button>
+                    <input id="Commentaire" onChange={inputChange} value={newTask} placeholder="Trash talkez"></input>
+                </div>
                 <div id="lesLikesPost">
                     <button id="Like" onClick={() => updateCount("increment")}>👍</button>
                     <p id="likeTotal">{count} ❤️</p>

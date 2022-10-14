@@ -1,8 +1,13 @@
 #BlocCom {
     border: 1px solid black;
     width: 390px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     background-color: white;
+    display: flex;
+}
+
+#BlocCom:hover {
+    background-color: red;
 }
 
 #AuteurCom {
@@ -27,6 +32,7 @@
 #Bloc {
     border-top: 1px solid black;
     display: flex;
+    width: 390px;
 }
 
 #Com {
@@ -37,10 +43,18 @@
 #lesLikes {
     position: relative;
     margin-top: 8px;
-    margin-left: 20px;
+    margin-left: 45px;
     display: flex;
     border: 3px solid rgb(210, 165, 52);
     height: 30px;
     border-radius: 18px 18px 18px 18px;
     background-color: white;
 }
+
+#Poubelle {
+    position: relative;
+    zoom: 300%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+

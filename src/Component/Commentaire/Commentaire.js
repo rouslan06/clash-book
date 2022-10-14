@@ -18,18 +18,21 @@ function Commentaire(props) {
 
     return (
         <li id="BlocCom">
-            <div id="AuteurCom">
-                <p id="Auteur">Clashé par :</p>
-                <p id="Underline">Zboub</p>
-            </div>
-            <div id="Bloc">
-                <p id="Com">{props.content}</p>
-                <div id="lesLikes">
-                    <button id="Like" onClick={() => updateCount("increment")}>👍</button>
-                    <p id="likeTotal">{count} ❤️</p>
-                    <button id="Dislike" onClick={() => updateCount("decrement")}>👎</button>
+            <div id="BlocGauche">
+                <div id="AuteurCom">
+                    <p id="Auteur">Clashé par :</p>
+                    <p id="Underline">Zboub</p>
+                </div>
+                <div id="Bloc">
+                    <p id="Com">{props.content}</p>
+                    <div id="lesLikes">
+                        <button id="Like" onClick={() => updateCount("increment")}>👍</button>
+                        <p id="likeTotal">{count} ❤️</p>
+                        <button id="Dislike" onClick={() => updateCount("decrement")}>👎</button>
+                    </div>
                 </div>
             </div>
+            <div id="Poubelle">🚮</div>
         </li>
     )
 }
