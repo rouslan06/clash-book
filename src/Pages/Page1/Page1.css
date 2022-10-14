@@ -3,18 +3,15 @@
 }
 
 #Actus ul {
-    display: flex;
     list-style-type: none;
-    flex-wrap: wrap;
 }
 
 #titre {
     text-align: center;
 }
 
-#Actus li {
-    margin-left: auto;
-    margin-right: auto;
+#LesPosts {
+    margin-left: -40px;
 }
 
 #enTete {
