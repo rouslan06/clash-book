@@ -32,9 +32,8 @@ function Page3() {
               <textarea
                 name="message"
                 id="message"
-                placeholder="mess"
+                placeholder="Balance ton Clash"
                 onChange={(e) => setMessage(e.target.value)}
-                value="Balance ton clash !"
               />
 
               <div className="footerForm">

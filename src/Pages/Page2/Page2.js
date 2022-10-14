@@ -1,5 +1,6 @@
 import Menu from "../../Component/Menu/Menu";
 import "./Page2.css";
+import Register from "../../Component/Register/Register";
 
 
 function Page2() {
@@ -8,10 +9,9 @@ function Page2() {
     <div>
       <Menu />
       <div id="Page2">
-        <h1>Page de Bastien</h1>
-        <ul>
-    
-        </ul>
+        <h1>Registration</h1>
+        
+        <Register />
       </div>
     </div>
   );
