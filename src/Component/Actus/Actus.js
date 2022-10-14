@@ -51,7 +51,7 @@ function Actus({ title, description}){
     return(
 
         <li className="Actus">
-            <p>Posté par : _______</p>
+            <p>Posté par : RED BOULE</p>
             <div id="PosteAuteur">
                 <h3>{title}</h3>
                 <p>{description}</p>
