@@ -12,10 +12,6 @@
     text-align: center;
 }
 
-#Actus li:hover {
-    background-color: rgb(179, 205, 215);
-}
-
 #Actus li {
     margin-left: auto;
     margin-right: auto;

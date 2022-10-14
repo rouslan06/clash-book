@@ -1,0 +1,46 @@
+#BlocCom {
+    border: 1px solid black;
+    width: 390px;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+#AuteurCom {
+    display: flex;
+}
+
+#Auteur {
+    margin-top: 5px;
+    margin-bottom: 7px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#Underline {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    border-bottom: 3px solid rgb(132, 48, 138);
+    height: 18px;
+}
+
+#Bloc {
+    border-top: 1px solid black;
+    display: flex;
+}
+
+#Com {
+    margin-left: 10px;
+    width: 180px;
+}
+
+#lesLikes {
+    position: relative;
+    margin-top: 8px;
+    margin-left: 20px;
+    display: flex;
+    border: 3px solid rgb(210, 165, 52);
+    height: 30px;
+    border-radius: 18px 18px 18px 18px;
+    background-color: white;
+}
