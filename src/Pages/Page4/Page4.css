@@ -1,3 +1,10 @@
 #Page4{
     flex: 1;
+    background-color: aquamarine;
+    text-align: center;
+}
+
+.listearticles {
+    display:inline-flex;
+
 }
