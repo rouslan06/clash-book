@@ -1,11 +1,13 @@
 .Actus {
-    width: 400px;
+    width: 420px;
     border: 1px solid black;
-    padding: 0 10px;
-    margin: 20px;
     background-color: rgb(179, 205, 215);
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: -20px;
+    margin-top: 50px;
+}
+
+.Actus > p:first-child {
+    padding-left: 10px;
 }
 
 #Boutons {
@@ -86,4 +88,9 @@
     margin-top: 2px;
     margin-left: -3px;
     border: 1px solid white
+}
+
+#PosteAuteur {
+    border-top: 1px solid black;
+    padding: 0 10px;
 }

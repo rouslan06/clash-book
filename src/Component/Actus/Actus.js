@@ -51,22 +51,25 @@ function Actus({ title, description}){
     return(
 
         <li className="Actus">
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <div id="Boutons">
-                <div id="SectionAjout">  
-                    <button id="addCom" onClick={addTask}>#</button>
-                    <input id="Commentaire" onChange={inputChange} value={newTask} placeholder="Trash talkez"></input>
+            <p>Posté par : RED BOULE</p>
+            <div id="PosteAuteur">
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <div id="Boutons">
+                    <div id="SectionAjout">  
+                        <button id="addCom" onClick={addTask}>#</button>
+                        <input id="Commentaire" onChange={inputChange} value={newTask} placeholder="Trash talkez"></input>
+                    </div>
+                    <div id="lesLikesPost">
+                        <button id="Like" onClick={() => updateCount("increment")}>👍</button>
+                        <p id="likeTotal">{count} ❤️</p>
+                        <button id="Dislike" onClick={() => updateCount("decrement")}>👎</button>
+                    </div>
                 </div>
-                <div id="lesLikesPost">
-                    <button id="Like" onClick={() => updateCount("increment")}>👍</button>
-                    <p id="likeTotal">{count} ❤️</p>
-                    <button id="Dislike" onClick={() => updateCount("decrement")}>👎</button>
-                </div>
+                <ul id="colonneCom">
+                    {tasksList.map((activeTask, index) => <Commentaire content={activeTask} key={index} />)}
+                </ul>
             </div>
-            <ul id="colonneCom">
-                {tasksList.map((activeTask, index) => <Commentaire content={activeTask} key={index} />)}
-            </ul>
         </li>
     )
 }
