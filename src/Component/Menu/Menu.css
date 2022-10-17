@@ -1,10 +1,11 @@
 
 .menu-container{
     margin-left: 1em;
+    position: fixed;
+    top: 0;
 }
 
 .menu-trigger img{
-    position: absolute;
     top: 20px;
     height: 60px;
     width: 60px;
@@ -15,9 +16,8 @@
 
 #navigation{
     background: white;
-  
+    position: absolute;
     width: 13em;
-    margin-top: 6em;
 }
 
 .menu{
