@@ -15,6 +15,7 @@
 
 #navigation{
     background: white;
+    position: absolute;
     width: 13em;
     margin-top: 6em;
 }
