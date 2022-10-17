@@ -7,10 +7,6 @@
     margin-left: -36px;
 }
 
-#BlocCom:hover {
-    background-color: red;
-}
-
 #AuteurCom {
     display: flex;
 }
@@ -20,6 +16,7 @@
     margin-bottom: 7px;
     margin-left: 10px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 #Underline {
@@ -47,7 +44,7 @@
     margin-top: 12px;
     margin-left: 45px;
     display: flex;
-    border: 3px solid rgb(210, 165, 52);
+    border: none;
     height: 30px;
     border-radius: 18px 18px 18px 18px;
     background-color: white;

@@ -52,7 +52,7 @@ function Actus({ title, description}){
 
         <li className="Actus">
             <h3>{title}</h3>
-            <p>{description}</p>
+            <p id="desc">{description}</p>
             <div id="Boutons">
                 <div id="SectionAjout">  
                     <button id="addCom" onClick={addTask}>#</button>

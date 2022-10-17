@@ -50,8 +50,6 @@ function Page1(){
             <div id="Actus">
                 <h1 id="titre">Clash Book</h1>
                 <div id="enTete">
-                    <h1>Page de Rouslan</h1>
-                    <h2>Liste des actus</h2>
                 </div>
                 <ul id='LesPosts'>
                     {articles.map((article, index) => <Actus
