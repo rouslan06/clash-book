@@ -93,5 +93,8 @@
   
 
 #LesPosts {
-    margin-left: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 420px;
+    margin-bottom: 20px;
 }

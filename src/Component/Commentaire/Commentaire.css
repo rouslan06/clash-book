@@ -9,6 +9,7 @@
 
 #AuteurCom {
     display: flex;
+    background-color: white;
 }
 
 #Auteur {
@@ -51,9 +52,8 @@
 }
 
 #Poubelle {
-    position: relative;
-    zoom: 300%;
+    zoom: 250%;
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
