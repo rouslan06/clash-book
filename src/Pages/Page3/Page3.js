@@ -32,7 +32,7 @@ function Page3() {
   //Création de la fonction handleChange. Lorsque l'utilisateur remplie les inputs, les variables d'état se mettront à jour grâce à leur fonction de mise à jour respective
   function handleCom(e){
       const {id, value} = e.target;
-      if (id === "Commentaire"){
+      if (id === "message"){
           setContent(value);
       }
   }
@@ -50,7 +50,7 @@ function Page3() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "bearer token"
+          "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiO…c5NX0.3FisCyGjQ-kDS6MfbVAGLNOPEq3ois8nc_54AitHrHI"
         },
 
         Body: {
@@ -97,7 +97,7 @@ function Page3() {
                 </form>
 
                 <div className="btn">
-                  <button className="cancel" onClick={cancetPost}>Annul le clash</button>
+                  <button className="cancel" onClick={cancetPost}>Annule le clash</button>
                   <button className="send" onClick={handleSubmit}>Envoie ton clash</button>
                 </div>
 
