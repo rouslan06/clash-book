@@ -18,19 +18,19 @@ function Register(){
 
     //Création de la fonction handleChange. Lorsque l'utilisateur remplie les inputs, les variables d'état se mettront à jour grâce à leur fonction de mise à jour respective
     function handleChange(e){
-      const {id, value} = e.target;
-      if(id === "firstName"){
-        setFirstName(value);
-    }
-        if(id === "lastName"){
-        setLastName(value);
-    }
-        if(id === "email"){
-        setEmail(value);
-    }
-        if(id === "password"){
-        setPassword(value);
-    }
+        const {id, value} = e.target;
+        if (id === "firstName"){
+            setFirstName(value);
+        }
+        if (id === "lastName"){
+            setLastName(value);
+        }
+        if (id === "email"){
+            setEmail(value);
+        }
+        if (id === "password"){
+            setPassword(value);
+        }
     }
 
     //Création de la fonction handleSbmit qui va permettre d'enregistrer le formulaire d'inscription une fois remplie. e.preventDefault va empêcher la page de s'actualiser
