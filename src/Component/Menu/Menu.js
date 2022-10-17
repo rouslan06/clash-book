@@ -15,12 +15,8 @@ function Menu() {
             <div className="menu-trigger" onClick={openClick}>
                 <img src="/Img/Me.png" alt="image menu" />
             </div>
-
-            {/* {
-                open && nav
-            } */}
-
-            <nav>
+            {
+                open && <nav>
                 <ul>
                     <li>
                         <Link to="/">LE FIL D'ACTU</Link>
@@ -36,6 +32,7 @@ function Menu() {
                     </li>
                 </ul>
             </nav>
+            }
 
         </div>
     )

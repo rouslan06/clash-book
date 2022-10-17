@@ -1,48 +1,7 @@
-/* nav{
-    border-bottom: 1px solid black;
-    width: 100vw;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
+
+.menu-container{
+    margin-left: 1em;
 }
-
-nav ul{
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li{
-    font-size: 20px;
-    margin: 0 10px;
-} */
-
-
-
-/*
-  
-  .dropdown-menu{
-    position:absolute;
-    top: 100px;
-    right: 20px;
-    background-color: red;
-    border-radius: var(--border-radius);
-    padding: 10px 20px;
-    width: 200px;
-  } */
-
-
-
-
-/* .menu-container{
-    position:absolute;
-    top: 100px;
-    background-color: green;
-    border-radius: var(--border-radius);
-    padding: 10px 20px;
-    width: 200px;
-} */
 
 .menu-trigger img{
     position: absolute;
