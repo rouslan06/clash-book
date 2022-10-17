@@ -21,7 +21,7 @@ function Commentaire(props) {
             <div id="BlocGauche">
                 <div id="AuteurCom">
                     <p id="Auteur">Clashé par :</p>
-                    <p id="Underline">Zboub</p>
+                    <p id="Underline">Coca</p>
                 </div>
                 <div id="Bloc">
                     <p id="Com">{props.content}</p>

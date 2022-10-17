@@ -1,6 +1,8 @@
 import Menu from "../../Component/Menu/Menu";
 import { useState } from 'react';
 import "./Page3.css";
+// import Navabar from "./Navabar/Navabar";
+// import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 
 function Page3() {
@@ -23,6 +25,13 @@ function Page3() {
 
   return (
     <div>
+      {/* <Router> */}
+        {/* <Navabar/> */}
+        {/* <Switch> */}
+          {/* <Route path='/' /> */}
+        {/* </Switch> */}
+      {/* </Router> */}
+      
       <Menu />
       <div id="Page3">
         <h1>CREATE A NEW POST</h1>

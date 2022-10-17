@@ -1,9 +1,11 @@
 footer{
     position: sticky;
     min-height:50px; 
-    background:PapayaWhip;
+    box-shadow: #141420 0px 16px 16px 12px;
 }
 
 #footer{
+    color: white;
+    text-transform: uppercase;
     text-align: center;
 }
