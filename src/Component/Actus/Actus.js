@@ -14,7 +14,6 @@ function countReducer(state, action) {
     }
 }
 
-
 function Actus({ title, description}){
 
     //-----------------------------------------------------------//
@@ -48,6 +47,8 @@ function Actus({ title, description}){
     }
 
     //-----------------------------------------------------------//
+
+ 
 
 
     return(
