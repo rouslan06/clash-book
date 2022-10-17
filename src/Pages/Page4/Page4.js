@@ -13,31 +13,26 @@ function Page4() {
   // La variable d'état qui contient la liste ("")
   const [userPage4, setUserPage4] = useState("");
 
-  // Création de la fonction asynchrone pour récuperer les articles récents
+  // Création de la fonction asynchrone pour récuperer les articles
   async function getArticles() {
     const options = {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify ({
-        firstname: this.firstname,
-        lastname: this.lastname,
-        email: this.email,
-        password: this.password
-      }),
+      
     };
     let response = await fetch (
-      "https://social-network-api.osc-fr1.scalingo.io/clash-book", options);
+      "https://social-network-api.osc-fr1.scalingo.io/clash-book-1/posts", options)
+
     
 
     let data = await response.json ();
+    console.log(data);
 
   }
 
   
-
-
   const handlePage4Change = (e) => {
     const inputValue = e.target.value;
     setUserPage4(inputValue);
