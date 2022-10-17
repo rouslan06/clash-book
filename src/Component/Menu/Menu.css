@@ -1,9 +1,11 @@
 
 .menu-container{
+    margin-top: 5em;
     margin-left: 1em;
     position: fixed;
     top: 0;
 }
+
 
 .menu-trigger img{
     top: 20px;
@@ -12,12 +14,20 @@
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.menu-trigger:hover{
+    transform: rotate(380deg);
 }
 
 #navigation{
-    background: white;
+    border-radius: 5px;
     position: absolute;
     width: 13em;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: #ffffff24;
 }
 
 .menu{
