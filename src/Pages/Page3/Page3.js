@@ -28,35 +28,39 @@ function Page3() {
 
   //Création des variables d'état qui regroupent tous les inputs du formulaire, ainsi que la fonction de mise à jour des variables d'état 
   const [content, setContent] = useState("");
+  const [title, setTitle] = useState("");
+
 
   //Création de la fonction handleChange. Lorsque l'utilisateur remplie les inputs, les variables d'état se mettront à jour grâce à leur fonction de mise à jour respective
   function handleCom(e){
       const {id, value} = e.target;
       if (id === "message"){
-          setContent(value);
+        setContent(value);
       }
+      if (id === "titrePost"){
+        setTitle(value);
+    }
   }
 
   //Création de la fonction handleSbmit qui va permettre d'enregistrer le formulaire d'inscription une fois remplie. e.preventDefault va empêcher la page de s'actualiser
   function handleSubmit(e){
       e.preventDefault();
-      console.log(content);
-      addUser();
+      console.log(content, title);
+      addPost();
   }
 
   //Création de la fonction addUser
-  async function addUser(){
+  async function addPost(){
       let options = {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiO…c5NX0.3FisCyGjQ-kDS6MfbVAGLNOPEq3ois8nc_54AitHrHI"
+          "Authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzRkMmJkOGNjYWY3ZjAwMWQ5MGRkODgiLCJpYXQiOjE2NjYwMTM5NzYsImV4cCI6MTY2NjEwMDM3Nn0.-3YGzLtxknEQDGNGOwgBfE6vgw07a6lOYjniVW-c9v0"
         },
-
-        Body: {
-          title: String,
-          content: String
-        }
+        body: JSON.stringify({
+          title: title,
+          content: content
+        }),
       }
   
       const response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/clash-book/post`, options);
@@ -83,6 +87,7 @@ function Page3() {
 
           <form>
             <div className="postForm">
+              <input placeholder="titre" id="titrePost" onChange={handleCom}></input>
               <textarea
                 name="message"
                 id="message"
