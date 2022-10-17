@@ -16,7 +16,7 @@ function Menu() {
                 <img src="/Img/Me.png" alt="image menu" />
             </div>
             {
-                open && <nav>
+                open && <nav id="navigation">
                 <ul>
                     <li>
                         <Link to="/">LE FIL D'ACTU</Link>
