@@ -19,9 +19,12 @@ function Commentaire(props) {
     return (
         <li id="BlocCom">
             <div id="BlocGauche">
-                <div id="AuteurCom">
-                    <p id="Auteur">Clashé par :</p>
-                    <p id="Underline">Coca</p>
+                <div id="rowP">
+                    <div id="AuteurCom">
+                        <p id="Auteur">Clashé par :</p>
+                        <p id="Underline">Coca</p>
+                    </div>
+                    <div id="Poubelle">🚮</div>
                 </div>
                 <div id="Bloc">
                     <p id="Com">{props.content}</p>
@@ -32,7 +35,6 @@ function Commentaire(props) {
                     </div>
                 </div>
             </div>
-            <div id="Poubelle">🚮</div>
         </li>
     )
 }

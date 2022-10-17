@@ -10,6 +10,44 @@ function Menu() {
         setOpen(!open);
     }
 
+    const [emailConnect, setEmailConnect] = useState("");
+    const [passwordConnect, setPasswordConnect] = useState("");
+
+    function onChange(e){
+        const {id, value} = e.target;
+        if (id === "emailConnect") {
+            setEmailConnect(value)
+        }
+        if (id === "passwordConnect") {
+            setPasswordConnect(value)
+        }
+    }
+
+    function submit(e){
+        e.preventDefault();
+        login();
+    }
+
+    async function login(){
+        let options = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+    
+            body: JSON.stringify({
+                email: emailConnect,
+                password: passwordConnect,
+            }),
+        }
+    
+        const response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/clash-book/login`, options);
+    
+        const data = await response.json();
+    
+        console.log(data);
+    }
+
     return (
         <div className="menu-container">
             <div className="menu-trigger" onClick={openClick}>
@@ -31,6 +69,31 @@ function Menu() {
                         <Link to="/page4">TOUT TES POSTS</Link>
                     </li>
                 </ul>
+
+                <form onSubmit={submit}>
+                    <input
+                        type="email" 
+                        id="emailConnect" 
+                        placeholder="Email" 
+                        value={emailConnect}
+                        onChange={onChange}
+                        required
+                    />
+
+                    <input 
+                        type="password"
+                        id="passwordConnect"
+                        placeholder="Password"
+                        value={passwordConnect}
+                        onChange={onChange}
+                        required
+                    />
+
+                    <input 
+                        type="submit" 
+                        value="Connexion"
+                    />
+                </form>
             </nav>
             }
 

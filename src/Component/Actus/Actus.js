@@ -48,6 +48,9 @@ function Actus({ title, description}){
 
     //-----------------------------------------------------------//
 
+ 
+
+
     return(
 
         <li className="Actus">
@@ -65,7 +68,7 @@ function Actus({ title, description}){
                 </div>
             </div>
             <ul id="colonneCom">
-                {tasksList.map((activeTask, index) => <Commentaire content={activeTask} key={index} />)}
+                {tasksList.map((activeTask, index) => <Commentaire content={activeTask} key={index} index={index}/>)}
             </ul>
         </li>
     )
