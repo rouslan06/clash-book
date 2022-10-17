@@ -1,10 +1,21 @@
 #Page4{
     flex: 1;
-    background-color: aquamarine;
     text-align: center;
 }
 
 .listearticles {
-    display:inline-flex;
+    display: contents;
 
+}
+
+#entete {
+    border: 2px solid black;
+}
+
+.articles {
+    border: 1px solid black;
+    background-color:antiquewhite;
+    margin: 30px;
+    list-style-type: none;
+    
 }
