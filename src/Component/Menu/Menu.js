@@ -60,7 +60,7 @@ function Menu() {
                         <Link to="/">LE FIL D'ACTU</Link>
                     </li>
                     <li>
-                        <Link to="/page2">INSCRIT TOI</Link>
+                     <Link to="/page2"><img src="/Img/user.png" alt="image menu" /> INSCRIT TOI</Link>
                     </li>
                     <li>
                         <Link to="/page3">CREE TON CLASH</Link>
