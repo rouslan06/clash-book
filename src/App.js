@@ -5,12 +5,17 @@ import Page2 from "./Pages/Page2/Page2";
 import Page3 from "./Pages/Page3/Page3";
 import Page4 from "./Pages/Page4/Page4";
 import Footer from "./Component/Footer/Footer";
-
 import "./App.css";
+import Welcome from "./Pages/Welcome/Welcome";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Welcome />,
+    error: <Error404 />
+  },
+  {
+    path: "/page1",
     element: <Page1 />,
     error: <Error404 />
   },

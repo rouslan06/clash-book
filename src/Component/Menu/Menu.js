@@ -57,7 +57,10 @@ function Menu() {
                 open && <nav id="navigation">
                 <ul>
                     <li>
-                        <Link to="/">LE FIL D'ACTU</Link>
+                        <Link to="/">Welcome</Link>
+                    </li>
+                    <li>
+                        <Link to="/page1">LE FIL D'ACTU</Link>
                     </li>
                     <li>
                      <Link to="/page2"><img src="/Img/user.png" alt="image menu" /> INSCRIT TOI</Link>
