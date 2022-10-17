@@ -1,13 +1,12 @@
-import Menu from "../../Component/Menu/Menu";
 import "./Welcome.css";
+import { Link } from "react-router-dom";
 
 function Welcome(){
 
     return(
         <div>
-            <Menu />
             <div id="Actus">
-
+                <Link to="/page1">Welcome</Link>
 
             </div>            
         </div>        
