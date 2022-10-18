@@ -83,13 +83,6 @@ function Page3() {
 
   async function getID(){
 
-    getID();
-  }
-
-  // ------------------------------------------------------- //
-
-  async function getID(){
-
     let token = JSON.parse(localStorage.getItem("token"));
 
     const optionsID = {
@@ -105,9 +98,11 @@ function Page3() {
     const dataID = await response.json();
     const ID = dataID._id;
 
-    localStorage.setItem("ID", JSON.stringify(ID));
+    localStorage.setItem("userID", JSON.stringify(ID));
     
     console.log("key user :", ID);
+
+
   }
 
   return (

@@ -32,7 +32,7 @@ function Page1(){
         const dataID = await response.json();
         const articles = dataID.posts;
 
-        console.log("contenu du post : ", articles);
+        console.log("contenu des posts : ", articles);
 
         setArticles(articles);
     }
@@ -57,9 +57,9 @@ function Page1(){
                 </div>
                 <ul id='LesPosts'>
                     {articles.map((article, index) => <Actus
-                    key={index} 
-                    title={article.title}
-                    description={article.content}
+                        key={index} 
+                        title={article.title}
+                        description={article.content}
                     />)}
                 </ul>
             </div>            
