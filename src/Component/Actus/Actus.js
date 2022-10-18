@@ -48,25 +48,6 @@ function Actus({ title, description}){
 
     //-----------------------------------------------------------//
 
-    async function getUser(){
-        let options = {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzRkM2ZlY2NjYWY3ZjAwMWQ5MGRlNzgiLCJpYXQiOjE2NjYwMTY4MzIsImV4cCI6MTY2NjEwMzIzMn0.erZmixTBtfm3HxoQte38m54AzJhD3j5ULNGN7Gcdtx4"
-            }
-        }
-
-        const response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/clash-book/user`, options);
-
-        const data = await response.json();
-
-        console.log(data);
-    }
-
-    getUser();
-
-
     return(
 
         <li className="Actus">

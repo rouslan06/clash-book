@@ -44,8 +44,19 @@ function Menu() {
         const response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/clash-book/login`, options);
     
         const data = await response.json();
-    
+        const token = data.token;
+        const message = data.message;
+
+        if ( message == 'Wrong email or password' ) {
+            alert("Veuillez remplir les champs de connection ci dessous");
+        }
+        if ( message != 'Wrong email or password' ) {
+            alert("vous êtes connecté");
+        }
+
         console.log(data);
+
+        localStorage.setItem("token : ", JSON.stringify(token));
     }
 
     return (

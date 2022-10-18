@@ -19,7 +19,7 @@ function Page3() {
   // const handlePicture = () => {
   // };
 
-  const handlePost = () => {};
+  //const handlePost = () => {};
   const cancetPost = () => {};
 
   // -------------------------------------------------------------- //
@@ -51,25 +51,35 @@ function Page3() {
 
   //Création de la fonction addUser
   async function addPost(){
-      let options = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzRkMmJkOGNjYWY3ZjAwMWQ5MGRkODgiLCJpYXQiOjE2NjYwMTM5NzYsImV4cCI6MTY2NjEwMDM3Nn0.-3YGzLtxknEQDGNGOwgBfE6vgw07a6lOYjniVW-c9v0"
-        },
-        body: JSON.stringify({
-          title: title,
-          content: content
-        }),
-      }
-  
-      const response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/clash-book/post`, options);
-  
-      const data = await response.json();
-  
-      console.log(data);
-  }
 
+    let token = JSON.parse(localStorage.getItem("token"));
+
+    let options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `bearer ${token}`
+      },
+      body: JSON.stringify({
+        title: title,
+        content: content
+      }),
+    }
+
+    const response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/clash-book/post`, options);
+
+    const data = await response.json();
+    const checkLog = data.message;
+
+    if ( checkLog === 'Title and content are required.') {
+      alert("Veuillez remplir les champs ci-dessous pour poster");
+    }
+    if ( checkLog === 'Invalid token.' ) {
+      alert("Veuillez vous connecter pour poster");
+    }
+
+    console.log(data);
+  }
 
   return (
     <div>
@@ -85,7 +95,7 @@ function Page3() {
         <span id="titleCreate">CREATE A NEW POST</span>
         <div className="postStyle">
 
-          <form id="formCreate">
+          <div id="formCreate">
             <div className="postForm">
               <input placeholder="titre" id="titrePost" onChange={handleCom}></input>
               <textarea
@@ -105,15 +115,12 @@ function Page3() {
                   <button className="cancel" onClick={cancetPost}>Annule le clash</button>
                   <button className="send" onClick={handleSubmit}>Envoie ton clash</button>
                 </div>
-
               </div>
             </div>
-
-          </form>
+          </div>
         </div>
       </div>
     </div>
-
   );
 }
 
