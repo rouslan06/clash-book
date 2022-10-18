@@ -1,9 +1,10 @@
-
+/*contient de base tout le menu, div primaire*/
 .menu-container{
     margin-top: 5em;
     margin-left: 1em;
     position: fixed;
     top: 0;
+    z-index: 99;
 }
 
 .menu-trigger{
@@ -19,7 +20,6 @@
     border-radius: 5px;
     cursor: pointer;
 }
-
 
 #menu-text{
     color: white;
@@ -59,14 +59,6 @@
 #imgstyle{
     padding-right: 10px;
 }
-
-/* .menu{
-    position: absolute;
-    top: 100px;
-    border-radius: var(--border-radius);
-    padding: 10px 20px;
-    width: 200px;
-} */
 
 #connect{
     margin-bottom: 20px;
