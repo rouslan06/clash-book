@@ -27,7 +27,7 @@ function Page1(){
             }
         }
 
-        const response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/clash-book/posts?page=0&limit=3`, optionsID);
+        const response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/clash-book/posts?page=0&limit=5`, optionsID);
         
         const dataID = await response.json();
         const articles = dataID.posts;
