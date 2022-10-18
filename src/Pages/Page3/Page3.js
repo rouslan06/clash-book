@@ -1,8 +1,6 @@
 import Menu from "../../Component/Menu/Menu";
 import { useState } from 'react';
 import "./Page3.css";
-// import Navabar from "./Navabar/Navabar";
-// import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 
 function Page3() {
@@ -83,12 +81,6 @@ function Page3() {
 
   return (
     <div>
-      {/* <Router> */}
-        {/* <Navabar/> */}
-        {/* <Switch> */}
-          {/* <Route path='/' /> */}
-        {/* </Switch> */}
-      {/* </Router> */}
       
       <Menu />
       <div id="Page3">
@@ -97,7 +89,7 @@ function Page3() {
 
           <div id="formCreate">
             <div className="postForm">
-              <input placeholder="titre" id="titrePost" onChange={handleCom}></input>
+              <input placeholder="TON TITRE" id="titrePost" onChange={handleCom}></input>
               <textarea
                 name="message"
                 id="message"
@@ -112,8 +104,8 @@ function Page3() {
                 </form>
 
                 <div className="btn">
-                  <button className="cancel" onClick={cancetPost}>Annule le clash</button>
-                  <button className="send" onClick={handleSubmit}>Envoie ton clash</button>
+                  <button className="cancel" onClick={cancetPost}>ANNULER</button>
+                  <button className="send" onClick={handleSubmit}>POSTER</button>
                 </div>
               </div>
             </div>
