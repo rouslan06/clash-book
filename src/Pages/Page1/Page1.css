@@ -1,20 +1,22 @@
 #Actus {
-    flex: 1;
+  flex: 1;
+  margin-top: 10em;
 }
 
 #Actus ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 #titre {
   color: white;
-  font-size: 9em;
+  font-size: 5em;
   text-shadow: 1px 2px 5px #4c4c4c8f;;
   text-align: center;
   letter-spacing: 3px;
   outline: transparent;
   position: relative;
   touch-action: manipulation;
+  margin-bottom: 2em;
 }
 
 #titre:after{

@@ -9,7 +9,7 @@ function Page2() {
     <div>
       <Menu />
       <div id="Page2">
-        <h1>Inscris toi !</h1>
+        <span id="inscrisTitle">INSCRIS TOI</span>
         
         <Register />
       </div>

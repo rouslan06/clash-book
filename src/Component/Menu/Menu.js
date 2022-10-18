@@ -51,7 +51,8 @@ function Menu() {
     return (
         <div className="menu-container">
             <div className="menu-trigger" onClick={openClick}>
-                <img src="/Img/Me.png" alt="image menu" />
+                {/* <img src="/Img/Me.png" alt="image menu" /> */}
+                <span id="menu-text">M E N U</span>
             </div>
             {
                 open && <nav id="navigation">
@@ -59,24 +60,31 @@ function Menu() {
                     <li id="style">
                         <Link to="/"><img src="/Img/maison.png" alt="icone" id="imgstyle" />WELCOME</Link>
                     </li>
+
                     <li id="style">
                         <Link to="/page1"><img src="/Img/megaphone.png" alt="icone" id="imgstyle" />LE FIL D'ACTU</Link>
                     </li>
-                    <li id="style">
-                     <Link to="/page2"><img src="/Img/document.png" alt="icone" id="imgstyle" /> INSCRIT TOI</Link>
-                    </li>
-                    <li id="style">
-                        <Link to="/page3"><img src="/Img/pencil.png" alt="icone" id="imgstyle" />CREE TON CLASH</Link>
-                    </li>
-                    <li id="style">
-                        <Link to="/page4"><img src="/Img/favorites.png" alt="icone" id="imgstyle" />TOUT TES POSTS</Link>
-                    </li>
+
                     <li id="style">
                         <Link to="/"><img src="/Img/user.png" alt="icone" id="imgstyle" />PROFIL</Link>
                     </li>
+
+                    <li id="style">
+                     <Link to="/page2"><img src="/Img/document.png" alt="icone" id="imgstyle" /> INSCRIS TOI</Link>
+                    </li>
+
+                    <li id="style">
+                        <Link to="/page3"><img src="/Img/pencil.png" alt="icone" id="imgstyle" />NEW CLASH</Link>
+                    </li>
+
+                    <li id="style">
+                        <Link to="/page4"><img src="/Img/favorites.png" alt="icone" id="imgstyle" />TES POSTS</Link>
+                    </li>
+                 
                     <li id="style">
                         <Link to="/"><img src="/Img/question.png" alt="icone" id="imgstyle" />FAQ</Link>
                     </li>
+
                     <li id="style">
                         <Link to="/"><img src="/Img/log-out.png" alt="icone" id="imgstyle" />DECONNEXION</Link>
                     </li>
