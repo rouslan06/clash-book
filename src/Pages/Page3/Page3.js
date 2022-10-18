@@ -99,10 +99,6 @@ function Page3() {
 
               <div className="footerForm">
 
-                <form action="/action_page.php">
-                  <input type="file" id="myFile" name="filename" />
-                </form>
-
                 <div className="btn">
                   <button className="cancel" onClick={cancetPost}>ANNULER</button>
                   <button className="send" onClick={handleSubmit}>POSTER</button>

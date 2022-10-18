@@ -103,11 +103,13 @@ function Register(){
                 />
                           
             </form>
-            <input 
-                    id="submit" 
-                    type="submit"
-                    value="Nouveau clasher"
-                />
+
+           <input 
+                id="submitClasher" 
+                type="submit"
+                value="Nouveau clasher"
+            />
+
         </div>
     )
 }
