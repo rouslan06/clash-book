@@ -101,13 +101,13 @@ function Register(){
                     placeholder="Mot de passe"
                     required 
                 />
-                
-                <input 
+                          
+            </form>
+            <input 
                     id="submit" 
                     type="submit"
                     value="Nouveau clasher"
-                />          
-            </form>
+                />
         </div>
     )
 }
