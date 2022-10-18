@@ -112,7 +112,7 @@ function Menu() {
                     <input 
                         type="submit" 
                         value="Connexion"
-                        id="sumit"
+                        id="submitCo"
                     />
                 </form>
             </nav>
