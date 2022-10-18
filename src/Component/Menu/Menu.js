@@ -56,24 +56,33 @@ function Menu() {
             {
                 open && <nav id="navigation">
                 <ul>
-                    <li>
-                        <Link to="/">Welcome</Link>
+                    <li id="style">
+                        <Link to="/"><img src="/Img/maison.png" alt="icone" id="imgstyle" />WELCOME</Link>
                     </li>
-                    <li>
-                        <Link to="/page1">LE FIL D'ACTU</Link>
+                    <li id="style">
+                        <Link to="/page1"><img src="/Img/megaphone.png" alt="icone" id="imgstyle" />LE FIL D'ACTU</Link>
                     </li>
-                    <li>
-                     <Link to="/page2"><img src="/Img/user.png" alt="image menu" /> INSCRIT TOI</Link>
+                    <li id="style">
+                     <Link to="/page2"><img src="/Img/document.png" alt="icone" id="imgstyle" /> INSCRIT TOI</Link>
                     </li>
-                    <li>
-                        <Link to="/page3">CREE TON CLASH</Link>
+                    <li id="style">
+                        <Link to="/page3"><img src="/Img/pencil.png" alt="icone" id="imgstyle" />CREE TON CLASH</Link>
                     </li>
-                    <li>
-                        <Link to="/page4">TOUT TES POSTS</Link>
+                    <li id="style">
+                        <Link to="/page4"><img src="/Img/favorites.png" alt="icone" id="imgstyle" />TOUT TES POSTS</Link>
+                    </li>
+                    <li id="style">
+                        <Link to="/"><img src="/Img/user.png" alt="icone" id="imgstyle" />PROFIL</Link>
+                    </li>
+                    <li id="style">
+                        <Link to="/"><img src="/Img/question.png" alt="icone" id="imgstyle" />FAQ</Link>
+                    </li>
+                    <li id="style">
+                        <Link to="/"><img src="/Img/log-out.png" alt="icone" id="imgstyle" />DECONNEXION</Link>
                     </li>
                 </ul>
 
-                <form onSubmit={submit}>
+                <form id="connect" onSubmit={submit}>
                     <input
                         type="email" 
                         id="emailConnect" 
@@ -95,6 +104,7 @@ function Menu() {
                     <input 
                         type="submit" 
                         value="Connexion"
+                        id="sumit"
                     />
                 </form>
             </nav>

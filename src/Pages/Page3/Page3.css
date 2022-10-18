@@ -1,32 +1,48 @@
 #Page3{
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5em;
+}
+
+#formCreate{
+  color: white;
+}
+
+#titleCreate{
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+#titrePost {
+  width: 300px;
+  height: 30px;
 }
 
 .postStyle{
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: 10em;
-    margin-right: 10em;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 10em;
+  margin-right: 10em;
 }
 
-h1{
-    text-align: center;
-    text-transform: uppercase;
-}
+
 
 textarea{
-    margin: 15px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0px 2px 10px #0000002e;
-    width: 699px;
-    height: 28px;
-    padding: 2em;
+  margin: 15px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px #0000002e;
+  width: 699px;
+  height: 28px;
+  padding: 2em;
 }
 
 .btn{
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .send{
@@ -94,37 +110,32 @@ textarea{
 }
 
 .cancel{
-    margin: 10px;
-    padding: 15px 30px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;
-    border-radius: 10px;
-    display: block;
-    border: 0px;
-    font-weight: 700;
-    box-shadow: 0px 0px 14px -7px #5e8bd1;
-    background-image: linear-gradient(45deg, #351C9C 0%, #5e8bd1 50%, #351C9C 100%);
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #5e8bd1;
+  background-image: linear-gradient(45deg, #351C9C 0%, #5e8bd1 50%, #351C9C 100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
     
 .cancel:hover{
-    background-position: right center;
+  background-position: right center;
     /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
     
 .cancel:active{
-    transform: scale(0.95);
-}
-
-#titrePost {
-  width: 300px;
-  height: 30px;
+  transform: scale(0.95);
 }

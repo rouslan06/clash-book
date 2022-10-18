@@ -1,0 +1,131 @@
+
+#img{
+    width: 99vw;
+}
+
+#position{
+    display: flex;
+    justify-content: center;
+    margin-top: -14em;
+    margin-bottom: 10em;
+}
+
+#enter{
+    font-size: 1em;
+    letter-spacing: 11px;
+}
+
+/*effet glitch pour le bouton entrer*/
+
+#glitch{
+   color: #efefef;
+   font-size: 1em;
+   background: #16172466;
+   padding: 1.5rem 5rem;
+   border-radius: 1.3rem;
+   border: none;
+   position: relative; 
+}
+
+
+#glitch:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #00f7f6;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 1.3rem;
+}
+
+#glitch:hover:after{
+    animation: pink .4s 2;
+}
+
+#glitch:hover:before{
+    animation: blue .4s 2;
+}
+
+#glitch:hover{
+    animation: skew .4s;
+}
+
+#glitch:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #fa01fd;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 1.3rem;
+    color: #efefef;
+}
+
+@keyframes blue {
+    0% {
+        transform: translate(0)
+    }
+    20% {
+        transform: translate(-.6rem, .6rem)
+    }
+    40% {
+        transform: translate(-.6rem, -.6rem)
+    }
+    60% {
+        transform: translate(.6rem, -.6rem)
+    }
+    80% {
+        transform: translate(.6rem, -.6rem)
+    }
+    to {
+        transform: translate(0)
+    }
+}
+
+@keyframes pink {
+    0% {
+        transform: translate(0)
+    }
+    20% {
+        transform: translate(.6rem, .6rem)
+    }
+    40% {
+        transform: translate(.6rem, .6rem)
+    }
+    60% {
+        transform: translate(-.6rem, -.6rem)
+    }
+    80% {
+        transform: translate(-.6rem, .6rem)
+    }
+    to {
+        transform: translate(0)
+    }
+}
+
+@keyframes skew {
+    0% {
+        transform: skew(0);
+    }
+    20% {
+        transform: skew(-50deg);
+    }
+    40% {
+        transform: skew(10deg);
+    }
+    60% {
+        transform: skew(-20deg);
+    }
+    80% {
+        transform: skew(25deg);
+    }
+    to {
+        transform: skew(0);
+    }
+}

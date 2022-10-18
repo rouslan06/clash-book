@@ -48,7 +48,7 @@ function Page1(){
         <div>
             <Menu />
             <div id="Actus">
-                <h1 id="titre">Clash Book</h1>
+                <h1 id="titre">Clash Time</h1>
                 <div id="enTete">
                 </div>
                 <ul id='LesPosts'>

@@ -82,10 +82,10 @@ function Page3() {
       
       <Menu />
       <div id="Page3">
-        <h1>CREATE A NEW POST</h1>
+        <span id="titleCreate">CREATE A NEW POST</span>
         <div className="postStyle">
 
-          <form>
+          <form id="formCreate">
             <div className="postForm">
               <input placeholder="titre" id="titrePost" onChange={handleCom}></input>
               <textarea
