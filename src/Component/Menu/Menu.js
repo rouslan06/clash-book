@@ -54,9 +54,9 @@ function Menu() {
             alert("vous êtes connecté");
         }
 
-        console.log(data);
+        console.log("token : ", token);
 
-        localStorage.setItem("token : ", JSON.stringify(token));
+        localStorage.setItem("token", JSON.stringify(token));
     }
 
     return (

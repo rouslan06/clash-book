@@ -43,7 +43,7 @@ function Page3() {
   //Création de la fonction handleSbmit qui va permettre d'enregistrer le formulaire d'inscription une fois remplie. e.preventDefault va empêcher la page de s'actualiser
   function handleSubmit(e){
       e.preventDefault();
-      console.log(content, title);
+      console.log("contenu du post : ", title, content,);
       addPost();
   }
 
@@ -75,18 +75,40 @@ function Page3() {
     if ( checkLog === 'Invalid token.' ) {
       alert("Veuillez vous connecter pour poster");
     }
+    
+    getID();
+  }
 
-    console.log(data);
+  // ------------------------------------------------------- //
+
+  async function getID(){
+
+    let token = JSON.parse(localStorage.getItem("token"));
+
+    const optionsID = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `bearer ${token}`
+        }
+    }
+
+    const response = await fetch("https://social-network-api.osc-fr1.scalingo.io/clash-book/user", optionsID);
+    
+    const dataID = await response.json();
+    const ID = dataID._id;
+
+    localStorage.setItem("ID", JSON.stringify(ID));
+    
+    console.log("key user :", ID);
   }
 
   return (
     <div>
-      
       <Menu />
       <div id="Page3">
         <span id="titleCreate">CREATE A NEW POST</span>
         <div className="postStyle">
-
           <div id="formCreate">
             <div className="postForm">
               <input placeholder="TON TITRE" id="titrePost" onChange={handleCom}></input>
@@ -98,11 +120,6 @@ function Page3() {
               />
 
               <div className="footerForm">
-
-                <form action="/action_page.php">
-                  <input type="file" id="myFile" name="filename" />
-                </form>
-
                 <div className="btn">
                   <button className="cancel" onClick={cancetPost}>ANNULER</button>
                   <button className="send" onClick={handleSubmit}>POSTER</button>
