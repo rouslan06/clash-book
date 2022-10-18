@@ -83,6 +83,13 @@ function Page3() {
 
   async function getID(){
 
+    getID();
+  }
+
+  // ------------------------------------------------------- //
+
+  async function getID(){
+
     let token = JSON.parse(localStorage.getItem("token"));
 
     const optionsID = {
@@ -120,6 +127,7 @@ function Page3() {
               />
 
               <div className="footerForm">
+
                 <div className="btn">
                   <button className="cancel" onClick={cancetPost}>ANNULER</button>
                   <button className="send" onClick={handleSubmit}>POSTER</button>
