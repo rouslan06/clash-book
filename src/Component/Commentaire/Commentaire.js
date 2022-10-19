@@ -11,10 +11,14 @@ function countReducer(state, action) {
     }
 }
 
-function Commentaire(props) {
+// ---------------------------------------------------------- //
 
-     // variable d'etat qui compte les likes
-     const [count, updateCount] = useReducer(countReducer, 0);
+function Commentaire({ comments, index }) {
+
+    // variable d'etat qui compte les likes
+    const [count, updateCount] = useReducer(countReducer, 0);
+
+    //console.log("comments :", comments, " | ", "key :",index);
 
     return (
         <li id="BlocCom">
@@ -24,10 +28,9 @@ function Commentaire(props) {
                         <p id="Auteur">Clashé par :</p>
                         <p id="Underline">Coca</p>
                     </div>
-                    <div id="Poubelle">🚮</div>
                 </div>
                 <div id="Bloc">
-                    <p id="Com">{props.content}</p>
+                    <p id="Com"> { comments.content }</p>
                     <div id="lesLikes">
                         <button id="Like" onClick={() => updateCount("increment")}>👍</button>
                         <p id="likeTotal">{count} ❤️</p>

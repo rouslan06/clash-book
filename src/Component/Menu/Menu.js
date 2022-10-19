@@ -54,9 +54,36 @@ function Menu() {
             alert("vous êtes connecté");
         }
 
-        console.log("token : ", token);
+        console.log("token : ", data);
 
         localStorage.setItem("token", JSON.stringify(token));
+
+        getID();
+    }
+
+    // ------------------------------------------------------- //
+
+    async function getID(){
+
+        let token = JSON.parse(localStorage.getItem("token"));
+
+        const optionsID = {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `bearer ${token}`
+            }
+        }
+
+        const response = await fetch("https://social-network-api.osc-fr1.scalingo.io/clash-books/user", optionsID);
+        
+        const dataID = await response.json();
+        const ID = dataID._id;
+
+        localStorage.setItem("userID", JSON.stringify(ID));
+        
+        console.log("key user :", ID);
+
     }
 
     return (

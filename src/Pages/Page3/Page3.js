@@ -43,7 +43,6 @@ function Page3() {
   //Création de la fonction handleSbmit qui va permettre d'enregistrer le formulaire d'inscription une fois remplie. e.preventDefault va empêcher la page de s'actualiser
   function handleSubmit(e){
       e.preventDefault();
-      console.log("contenu du post : ", title, content,);
       addPost();
   }
 
@@ -75,34 +74,9 @@ function Page3() {
     if ( checkLog === 'Invalid token.' ) {
       alert("Veuillez vous connecter pour poster");
     }
-    
-    getID();
-  }
-
-  // ------------------------------------------------------- //
-
-  async function getID(){
-
-    let token = JSON.parse(localStorage.getItem("token"));
-
-    const optionsID = {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `bearer ${token}`
-        }
+    if ( checkLog != 'Invalid token.' || checkLog != 'Title and content are required.') {
+      alert("Bravo ! Vous avez clashé");
     }
-
-    const response = await fetch("https://social-network-api.osc-fr1.scalingo.io/clash-book/user", optionsID);
-    
-    const dataID = await response.json();
-    const ID = dataID._id;
-
-    localStorage.setItem("userID", JSON.stringify(ID));
-    
-    console.log("key user :", ID);
-
-
   }
 
   return (

@@ -27,7 +27,7 @@ function Page1(){
             }
         }
 
-        const response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/clash-book/posts?page=0&limit=5`, optionsID);
+        const response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/clash-book/posts?page=0&limit=2`, optionsID);
         
         const dataID = await response.json();
         const articles = dataID.posts;
@@ -48,6 +48,8 @@ function Page1(){
         getArticles();
     }, []);
 
+    // console.log("Post : ",articles);
+
     return(
         <div>
             <Menu />
@@ -57,9 +59,12 @@ function Page1(){
                 </div>
                 <ul id='LesPosts'>
                     {articles.map((article, index) => <Actus
-                        key={index} 
+                        key={index}
+                        index={index} 
                         title={article.title}
                         description={article.content}
+                        comments={article.comments}
+                        
                     />)}
                 </ul>
             </div>            

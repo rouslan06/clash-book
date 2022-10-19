@@ -59,7 +59,7 @@ function Register(){
         const response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/clash-book/register`, options);
     
         const data = await response.json();
-    
+
         console.log(data);
     }
 

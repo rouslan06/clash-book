@@ -14,7 +14,13 @@ function countReducer(state, action) {
     }
 }
 
-function Actus({ title, description}){
+// affiche une actu 
+
+function Actus({ title, description, comments, index}){
+
+    // console.log("commentaire du post : ", comments);
+
+    //console.log("key : ", index);
 
     //-----------------------------------------------------------//
 
@@ -23,30 +29,55 @@ function Actus({ title, description}){
 
     //-----------------------------------------------------------//
 
-    const [newTask, setNewTask] = useState("");
-    const [tasksList, setTasksList] = useState([]);
+    const [commentsPost, setCommentsPost] = useState("");
   
     /**
      * L'utilisateur a cliqué sur le bouton Validation
      * Je modifie mes deux variables d'environnements
      */
-    const addTask = () => {
-      // Ajout de la tache actuelle à mon tableau
-      tasksList.push(newTask);
-  
-      // Mise à jour de la variable d'environnement tasksList
-      setTasksList(tasksList);
-  
-      // Mise à jour de la variable d'environnement newTask
-      setNewTask("");
+    const handleCom = () => {
+        // Ajout de la tache actuelle à mon tableau
+        
+
+        // Mise à jour de la variable d'environnement newTask
+        setCommentsPost("");
     }
 
-    //L'input a changer de valeur, je met à jour ma variable d'environnement newTask
-    const inputChange = (e) =>{
-        setNewTask(e.target.value);
+    //Création de la fonction handleSbmit qui va permettre d'enregistrer le formulaire d'inscription une fois remplie. e.preventDefault va empêcher la page de s'actualiser
+    function handleSubmit(e){
+        e.preventDefault();
+        getComment();
+    }
+
+    async function getComment(){
+
+        let token = JSON.parse(localStorage.getItem("token"));
+
+        // Fonction afficher les posts
+        const optionsID = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `bearer ${token}`
+            },
+            body: JSON.stringify({
+                postId: "634fdee2ccaf7f001d9658bf",
+                content: "634fdee2ccaf7f001d9658bf"
+            }),
+        }
+
+        const response = await fetch("https://social-network-api.osc-fr1.scalingo.io/clash-book/post/comment", optionsID);
+        
+        const dataID = await response.json();
+
+        // verification si envoyé
+        // console.log("Comentaire envoyé : ", dataID)
+
+        setCommentsPost(commentsPost);
     }
 
     //-----------------------------------------------------------//
+    
 
     return(
 
@@ -55,8 +86,8 @@ function Actus({ title, description}){
             <p>{description}</p>
             <div id="Boutons">
                 <div id="SectionAjout">  
-                    <button id="addCom" onClick={addTask}>#</button>
-                    <input id="Commentaire" onChange={inputChange} value={newTask} placeholder="Trash talkez"></input>
+                    <button id="addCom" onClick={handleSubmit}>#</button>
+                    <input id="Commentaire" onChange={handleCom} placeholder="Trash talkez"></input> 
                 </div>
                 <div id="lesLikesPost">
                     <button id="Like" onClick={() => updateCount("increment")}>👍</button>
@@ -65,7 +96,11 @@ function Actus({ title, description}){
                 </div>
             </div>
             <ul id="colonneCom">
-                {tasksList.map((activeTask, index) => <Commentaire content={activeTask} key={index} index={index}/>)}
+                {comments.map((postCom, index) => <Commentaire 
+                    key={index} 
+                    index={index}
+                    comments={postCom}/>
+                )}
             </ul>
         </li>
     )
