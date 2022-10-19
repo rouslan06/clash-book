@@ -7,6 +7,7 @@ import Page4 from "./Pages/Page4/Page4";
 import Footer from "./Component/Footer/Footer";
 import "./App.css";
 import Welcome from "./Pages/Welcome/Welcome";
+import Page5 from "./Pages/Page5/Page5";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
   {
     path: "/page4",
     element: <Page4 />,
+    error: <Error404 />
+  },
+  {
+    path: "/page5",
+    element: <Page5 />,
     error: <Error404 />
   }
 ]);

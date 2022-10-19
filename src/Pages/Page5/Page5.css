@@ -1,0 +1,13 @@
+#page5 {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7em;
+    margin-bottom: 7em;
+}
+
+#profilTitle {
+    color: white;
+    font-size: 5em;
+}
