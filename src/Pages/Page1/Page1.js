@@ -64,7 +64,7 @@ function Page1(){
                         title={article.title}
                         description={article.content}
                         comments={article.comments}
-                        
+                        idPost={article._id}
                     />)}
                 </ul>
             </div>            

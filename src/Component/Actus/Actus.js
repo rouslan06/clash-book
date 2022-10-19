@@ -16,7 +16,7 @@ function countReducer(state, action) {
 
 // affiche une actu 
 
-function Actus({ title, description, comments, index}){
+function Actus({ title, description, comments, index, idPost}){
 
     // console.log("commentaire du post : ", comments);
 
@@ -35,12 +35,12 @@ function Actus({ title, description, comments, index}){
      * L'utilisateur a cliqué sur le bouton Validation
      * Je modifie mes deux variables d'environnements
      */
-    const handleCom = () => {
+    const handleCom = (e) => {
         // Ajout de la tache actuelle à mon tableau
         
 
         // Mise à jour de la variable d'environnement newTask
-        setCommentsPost("");
+        setCommentsPost(e.target.value);
     }
 
     //Création de la fonction handleSbmit qui va permettre d'enregistrer le formulaire d'inscription une fois remplie. e.preventDefault va empêcher la page de s'actualiser
@@ -61,8 +61,8 @@ function Actus({ title, description, comments, index}){
                 "Authorization": `bearer ${token}`
             },
             body: JSON.stringify({
-                postId: "634fdee2ccaf7f001d9658bf",
-                content: "contenu non actualisé pour le moment"
+                postId: idPost,
+                content: commentsPost
             }),
         }
 
