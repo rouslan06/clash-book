@@ -27,6 +27,8 @@ function Profil() {
         console.log("datainfo", dataInfo);
     }
 
+    useEffect(()=>{getInfo()},[])
+
     async function Modifier(){
         let token = JSON.parse(localStorage.getItem("token"));
 
