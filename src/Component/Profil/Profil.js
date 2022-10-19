@@ -1,8 +1,6 @@
 import { useState, useEffect} from "react";
 import "./Profil.css";
 
-
-
 function Profil(){
     const [user, setUser] = useState({firstname: "", lastname: "", email: ""});
 
@@ -31,11 +29,34 @@ function Profil(){
     
     useEffect(()=>{getInfo()},[]);
 
+    function infoChange(e){
+        e.preventDefault();
+    }
+
     return (
-        <div>
-            <p>Prénom: {user.firstname} </p>
-            <p>Nom: {user.lastname}</p>
-            <p>Email: {user.email}</p>
+        <div className="info">
+            <label htmlFor="firstname">Prénom</label>
+            <input 
+                name="firstname" 
+                value={user.firstname}
+                onChange={infoChange}
+            />
+
+            <label htmlFor="lastname">Nom</label>
+            <input 
+                name="lastname" 
+                value={user.lastname}
+                onChange={infoChange}
+            />
+
+            <label htmlFor="email">Email</label>
+            <input 
+                name="email" 
+                value={user.email}
+                onChange={infoChange}
+            />
+
+            <button>Modifier</button>
         </div>
     )
 }
