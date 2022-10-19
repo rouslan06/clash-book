@@ -81,29 +81,32 @@ function Profil() {
     }
 
     return (
+        <div>
+
         <div className="info">
-            <label htmlFor="firstname">Prénom</label>
-            <input 
+            <label id="inputProfilText" htmlFor="firstname">Prénom :</label>
+            <input id="inputProfilStyle"
                 name="firstname" 
                 value={user.firstname}
                 onChange={firstnameChange}
             />
 
-            <label htmlFor="lastname">Nom</label>
-            <input 
+            <label id="inputProfilText" htmlFor="lastname">Nom :</label>
+            <input id="inputProfilStyle"
                 name="lastname" 
                 value={user.lastname}
                 onChange={lastNameChange}
             />
 
-            <label htmlFor="email">Email</label>
-            <input 
+            <label id="inputProfilText" htmlFor="email">Email :</label>
+            <input id="inputProfilStyle"
                 name="email" 
                 value={user.email}
                 onChange={emailChange}
             />
 
-            <button onClick={submitInfo}>Modifier</button>
+        </div>
+            <button id="buttonProfil" onClick={submitInfo}>Modifier</button>
         </div>
     )
 }
