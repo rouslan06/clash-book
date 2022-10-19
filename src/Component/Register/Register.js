@@ -64,7 +64,7 @@ function Register(){
     }
 
     return (
-        <div className="form">
+        <div className="form" id="register">
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 
@@ -104,11 +104,8 @@ function Register(){
                           
             </form>
 
-           <input 
-                id="submitClasher" 
-                type="submit"
-                value="Nouveau clasher"
-            />
+            <button id="submitClasher" 
+                type="submit">NEW CLASHER</button>
 
         </div>
     )

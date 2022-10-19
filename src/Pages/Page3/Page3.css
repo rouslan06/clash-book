@@ -9,6 +9,15 @@
   margin-top: 5em;
 }
 
+#titleCreate{
+  color: white;
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+  font-family: 'Abel';
+}
+
 #formCreate{
   margin-bottom: 10em;
   color: white;
@@ -20,13 +29,10 @@
   align-items: center;
 }
 
-#titleCreate{
-  color: white;
-  text-align: center;
-  font-size: 3em;
-  text-transform: uppercase;
-  margin-bottom: 2em;
+#titrePost::placeholder{
+  color: rgba(255, 255, 255, 0.382);
 }
+
 
 #titrePost {
   margin-bottom: 1em;
