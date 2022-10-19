@@ -33,7 +33,6 @@
   color: rgba(255, 255, 255, 0.382);
 }
 
-
 #titrePost {
   margin-bottom: 1em;
   margin-right: 34em;
@@ -121,4 +120,19 @@ textarea{
     
 .cancel:active{
   transform: scale(0.95);
+}
+
+
+
+/*partie responsive*/
+
+@media screen and (max-width: 900px) {
+
+#titrePost {
+  margin-right: 1em;
+}
+
+textarea{
+  width: 20em;
+  }
 }
