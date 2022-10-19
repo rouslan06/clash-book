@@ -51,7 +51,7 @@ function Page1(){
     // console.log("Post : ",articles);
 
     return(
-        <div>
+        <div className="page1">
             <Menu />
             <div id="Actus">
                 <h1 id="titre">CLASH TIME</h1>

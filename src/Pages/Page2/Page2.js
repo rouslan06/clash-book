@@ -6,7 +6,7 @@ import Register from "../../Component/Register/Register";
 function Page2() {
 
   return (
-    <div>
+    <div className="page2">
       <Menu />
       <div id="Page2">
         <span id="inscrisTitle">INSCRIS TOI</span>

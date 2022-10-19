@@ -1,8 +1,21 @@
+.page3{
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+}
+
 #Page3{
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 5em;
+}
+
+#titleCreate{
+  color: white;
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+  font-family: 'Abel';
 }
 
 #formCreate{
@@ -16,13 +29,10 @@
   align-items: center;
 }
 
-#titleCreate{
-  color: white;
-  text-align: center;
-  font-size: 3em;
-  text-transform: uppercase;
-  margin-bottom: 2em;
+#titrePost::placeholder{
+  color: rgba(255, 255, 255, 0.382);
 }
+
 
 #titrePost {
   margin-bottom: 1em;

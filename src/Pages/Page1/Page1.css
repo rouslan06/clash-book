@@ -1,3 +1,7 @@
+.page1{
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+}
+
 #Actus {
   flex: 1;
   margin-top: 10em;
@@ -34,8 +38,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 3%, #4423d4 3%, #bc1b2b 5%, #a51d68 5%);
-  text-shadow: -3px -3px 0px #512dc7, 3px 3px 0px #00E6F6;
+  background: linear-gradient(45deg, transparent 3%, #b53fb4c4 3%, #3a1a17ed 5%, #3f1460ba 5%);
+  text-shadow: -3px -3px 0px #8f21bddb, 3px 3px 0px #00e6f6;
   clip-path: var(--slice-0);
 }
 
