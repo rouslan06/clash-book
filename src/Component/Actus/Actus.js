@@ -62,7 +62,7 @@ function Actus({ title, description, comments, index}){
             },
             body: JSON.stringify({
                 postId: "634fdee2ccaf7f001d9658bf",
-                content: "634fdee2ccaf7f001d9658bf"
+                content: "contenu non actualisé pour le moment"
             }),
         }
 
