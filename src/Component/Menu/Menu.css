@@ -114,15 +114,11 @@ form input::placeholder{
 
 @media screen and (max-width: 900px) {
     .menu-trigger{
-        width: 6em;
-    }
-
-    ul{
-        padding-left: 10px;
+        width: 200px;
     }
 
     #navigation{
-        width: 6em;
+        width: 200px;
     }
 
     #style{

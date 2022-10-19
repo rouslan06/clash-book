@@ -125,10 +125,6 @@ function Menu() {
                     </li>
 
                     <li id="style">
-                        <Link to="/"><img src="/Img/log-out.png" alt="icone" id="imgstyle" />DECONNEXION</Link>
-                    </li>
-
-                    <li id="style">
                         <Link to="/">CONNEXION</Link>
                     </li>
                 </ul>
