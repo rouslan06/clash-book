@@ -51,7 +51,7 @@ function Page4() {
     <div className="page4">
       <Menu />
       <div id="Page4">
-      <span id="titleYourPost">YOUR POST</span>
+      <span id="titleYourPost">PAGE DE IBRAHIMA</span>
 
         <ul id="entete">
         </ul>
