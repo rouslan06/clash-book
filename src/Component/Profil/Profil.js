@@ -24,13 +24,60 @@ function Profil(){
         const email = dataInfo.email;
 
         setUser({firstname: firstname, lastname: lastname, email: email})
-        console.log(dataInfo);
+        console.log("datainfo", dataInfo);
     }
     
     useEffect(()=>{getInfo()},[]);
 
-    function infoChange(e){
+    async function Modifier(){
+        let token = JSON.parse(localStorage.getItem("token"));
+
+        const optionsModif = {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `bearer ${token}`
+            },
+
+            body: JSON.stringify ({
+                firstname: user.firstname,
+                lastname: user.lastname,
+                email: user.email
+            }),
+        }
+
+        const response = await fetch("https://social-network-api.osc-fr1.scalingo.io/clash-book/user", optionsModif);
+
+        const data = await response.json();
+
+    }
+
+    function firstnameChange(e){
         e.preventDefault();
+        setUser({
+            ...user,//permet de décomposer l'objet pour modifier les éléments 
+            firstname: e.target.value
+        });
+    }
+
+    function lastNameChange(e){
+        e.preventDefault();
+        setUser({
+            ...user,
+            lastname: e.target.value
+        });
+    }
+
+    function emailChange(e){
+        e.preventDefault();
+        setUser({
+            ...user,
+            email: e.target.value
+        });
+    }
+
+    function submitInfo(e){
+        Modifier();
     }
 
     return (
@@ -39,24 +86,24 @@ function Profil(){
             <input 
                 name="firstname" 
                 value={user.firstname}
-                onChange={infoChange}
+                onChange={firstnameChange}
             />
 
             <label htmlFor="lastname">Nom</label>
             <input 
                 name="lastname" 
                 value={user.lastname}
-                onChange={infoChange}
+                onChange={lastNameChange}
             />
 
             <label htmlFor="email">Email</label>
             <input 
                 name="email" 
                 value={user.email}
-                onChange={infoChange}
+                onChange={emailChange}
             />
 
-            <button>Modifier</button>
+            <button onClick={submitInfo}>Modifier</button>
         </div>
     )
 }
