@@ -4,11 +4,11 @@ import Profil from "../../Component/Profil/Profil";
 
 function Page5(){
     return (
-        <div>
+        <div className="page5">
             <Menu />
             <div id="page5">
 
-                <span id="profilTitle">PROFIL</span>
+                <span id="profilTitle">TON PROFIL</span>
 
                 <Profil />
             </div>

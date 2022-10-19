@@ -1,12 +1,12 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import "./Profil.css";
 
-function Profil(){
-    const [user, setUser] = useState({firstname: "", lastname: "", email: ""});
+function Profil() {
+    const [user, setUser] = useState({ firstname: "", lastname: "", email: "" });
 
-    async function getInfo(){
+    async function getInfo() {
         let token = JSON.parse(localStorage.getItem("token"));
-    
+
         const optionsInfo = {
             method: "GET",
             headers: {
@@ -14,11 +14,11 @@ function Profil(){
                 "Authorization": `bearer ${token}`
             }
         }
-    
+
         const responseInfo = await fetch("https://social-network-api.osc-fr1.scalingo.io/clash-book/user", optionsInfo);
-    
+
         const dataInfo = await responseInfo.json();
-    
+
         const firstname = dataInfo.firstname;
         const lastname = dataInfo.lastname;
         const email = dataInfo.email;
@@ -26,8 +26,6 @@ function Profil(){
         setUser({firstname: firstname, lastname: lastname, email: email})
         console.log("datainfo", dataInfo);
     }
-    
-    useEffect(()=>{getInfo()},[]);
 
     async function Modifier(){
         let token = JSON.parse(localStorage.getItem("token"));
