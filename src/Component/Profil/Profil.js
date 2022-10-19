@@ -24,7 +24,6 @@ function Profil() {
         const email = dataInfo.email;
 
         setUser({firstname: firstname, lastname: lastname, email: email})
-        console.log("datainfo", dataInfo);
     }
 
     useEffect(()=>{getInfo()},[])
@@ -49,6 +48,13 @@ function Profil() {
         const response = await fetch("https://social-network-api.osc-fr1.scalingo.io/clash-book/user", optionsModif);
 
         const data = await response.json();
+        const newMember = data.success;
+
+        if ( newMember === true ) {
+            alert("Clasheur modifié");
+        }
+
+
 
     }
 
