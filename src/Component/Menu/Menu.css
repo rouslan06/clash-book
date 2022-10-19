@@ -121,24 +121,24 @@ form input::placeholder{
         width: 200px;
     }
 
+    #emailConnect{
+        padding: 5px;
+    }
+
+    #passwordConnect{
+        padding: 5px;
+    }
+    
     #style{
-        font-size: 13px;
+        font-size: 15px;
     }
 
     #style:hover{
-        box-shadow: inset 85px 0 0 0 #43107a36;
+        box-shadow: inset 95px 0 0 0 #43107a36;
     }
 
     #imgstyle{
       display: none;
     }
 
-    /* #connect{
-    display: none; 
-    flex-direction: none; 
-     align-items: none;
-    background: none;
-    gap: 15px;
-    padding-left: 10px;
-    } */
 }

@@ -125,7 +125,7 @@ function Menu() {
                     </li>
 
                     <li id="style">
-                        <Link to="/">CONNEXION</Link>
+                        <Link to="/">DECONNEXION</Link>
                     </li>
                 </ul>
 
