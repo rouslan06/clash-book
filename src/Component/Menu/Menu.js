@@ -1,4 +1,5 @@
 import "./Menu.css";
+// import "./Component/MediaQueries/Media.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -98,6 +99,10 @@ function Menu() {
 
                     <li id="style">
                         <Link to="/"><img src="/Img/log-out.png" alt="icone" id="imgstyle" />DECONNEXION</Link>
+                    </li>
+
+                    <li id="style">
+                        <Link to="/">CONNEXION</Link>
                     </li>
                 </ul>
 

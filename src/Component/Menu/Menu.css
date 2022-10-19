@@ -107,3 +107,42 @@ form input::placeholder{
   color: #fff;
   box-shadow: inset 160px 0 0 0 #43107a36;
 }
+
+
+/*Partie responsive du menu*/
+
+
+@media screen and (max-width: 900px) {
+    .menu-trigger{
+        width: 6em;
+    }
+
+    ul{
+        padding-left: 10px;
+    }
+
+    #navigation{
+        width: 6em;
+    }
+
+    #style{
+        font-size: 13px;
+    }
+
+    #style:hover{
+        box-shadow: inset 85px 0 0 0 #43107a36;
+    }
+
+    #imgstyle{
+      display: none;
+    }
+
+    /* #connect{
+    display: none; 
+    flex-direction: none; 
+     align-items: none;
+    background: none;
+    gap: 15px;
+    padding-left: 10px;
+    } */
+}
