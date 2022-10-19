@@ -137,3 +137,12 @@
       transform: skew(0);
   }
 }
+
+
+/*partie responsive*/
+
+@media screen and (max-width: 900px) {
+  #register form {
+      width: 13em;
+  }
+}
