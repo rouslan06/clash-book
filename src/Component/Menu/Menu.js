@@ -55,7 +55,7 @@ function Menu() {
             alert("vous êtes connecté");
         }
 
-        console.log("token : ", data);
+        console.log("token : ", token);
 
         localStorage.setItem("token", JSON.stringify(token));
 

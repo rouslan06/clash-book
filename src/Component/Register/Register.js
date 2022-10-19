@@ -59,8 +59,16 @@ function Register(){
         const response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/clash-book/register`, options);
     
         const data = await response.json();
+        const message = data.message;
 
-        console.log(data);
+        if ( message === 'Firstname, lastname, email and password are required.') {
+            alert("Champs manquant");
+        }
+        if ( message != 'Firstname, lastname, email and password are required.') {
+            alert("Un nouveau clasheur a integré l'équipe");
+        }
+
+        console.log("creation de compte : ", data);
     }
 
     return (
@@ -104,7 +112,7 @@ function Register(){
                           
             </form>
 
-            <button id="submitClasher" 
+            <button id="submitClasher" onClick={handleSubmit}
                 type="submit">NEW CLASHER</button>
 
         </div>
