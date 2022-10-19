@@ -49,7 +49,7 @@ function Page1(){
     }, []);
 
     return(
-        <div>
+        <div className="page1">
             <Menu />
             <div id="Actus">
                 <h1 id="titre">CLASH TIME</h1>

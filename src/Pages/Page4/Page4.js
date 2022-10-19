@@ -48,7 +48,7 @@ function Page4() {
 
 
   return (
-    <div>
+    <div className="page4">
       <Menu />
       <div id="Page4">
         <h1>Page de Ibrahima</h1>

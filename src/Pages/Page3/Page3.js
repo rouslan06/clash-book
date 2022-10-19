@@ -111,7 +111,7 @@ function Page3() {
   }
 
   return (
-    <div>
+    <div className="page3">
       <Menu />
       <div id="Page3">
         <span id="titleCreate">CREATE A NEW POST</span>
