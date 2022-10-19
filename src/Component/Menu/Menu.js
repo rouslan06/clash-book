@@ -77,7 +77,7 @@ function Menu() {
                     </li>
 
                     <li id="style">
-                        <Link to="/"><img src="/Img/user.png" alt="icone" id="imgstyle" />PROFIL</Link>
+                        <Link to="/page5"><img src="/Img/user.png" alt="icone" id="imgstyle" />PROFIL</Link>
                     </li>
 
                     <li id="style">
