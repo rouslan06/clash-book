@@ -7,6 +7,16 @@
     text-align: center;
 }
 
+#titleYourPost{
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    font-family: 'Abel';
+  }
+
 .listearticles {
     display: contents;
 

@@ -51,9 +51,9 @@ function Page4() {
     <div className="page4">
       <Menu />
       <div id="Page4">
-        <h1>Page de Ibrahima</h1>
+      <span id="titleYourPost">YOUR POST</span>
+
         <ul id="entete">
-          <p> Liste des articles :</p>
         </ul>
 
         <ul id="lesarticles">
