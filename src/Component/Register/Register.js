@@ -10,13 +10,16 @@ import "./Register.css";
  */
 function Register(){
     
-    //Création des variables d'état qui regroupent tous les inputs du formulaire, ainsi que la fonction de mise à jour des variables d'état 
+    //Création des variables d'état à vide qui regroupent tous les inputs du formulaire, ainsi que la fonction de mise à jour des variables d'état 
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    //Création de la fonction handleChange. Lorsque l'utilisateur remplie les inputs, les variables d'état se mettront à jour grâce à leur fonction de mise à jour respective
+    /**
+     * Fonction qui va mettre à jour les variables
+     * @param {*} e 
+     */
     function handleChange(e){
         const {id, value} = e.target;
         if (id === "firstName"){
@@ -33,14 +36,19 @@ function Register(){
         }
     }
 
-    //Création de la fonction handleSbmit qui va permettre d'enregistrer le formulaire d'inscription une fois remplie. e.preventDefault va empêcher la page de s'actualiser
+    /**
+     * Fonction qui va valider le formulaire d'inscription. 
+     * @param {*} e 
+     */
     function handleSubmit(e){
         e.preventDefault();
         console.log(firstName, lastName, email, password);
-        addUser();
+        addUser();//Au click sur le bouton submit appel de la fonction addUser
     }
 
-    //Création de la fonction addUser
+    /**
+     * Création d'une fonction async qui va permettre de créer un utilisateur
+     */
     async function addUser(){
         let options = {
             method: "POST",

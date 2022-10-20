@@ -20,7 +20,7 @@
     border: none;
     border-bottom: 2px solid rgb(225 225 225 / 52%);
     background: none;
-    font-size: 1.9rem;
+    font-size: 20px;
     color: white;
     width: 400px;
 }
@@ -30,8 +30,11 @@
 }
 
 #buttonProfil{
+    font-family: 'Abel';
+    text-transform: uppercase;
     color: #efefef;
-    font-size: 1em;
+    font-size: 20px;
+    letter-spacing: 3px;
     background: #16172466;
     padding: 1.5rem 5rem;
     border-radius: 1.3rem;
