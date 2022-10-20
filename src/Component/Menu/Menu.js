@@ -69,10 +69,10 @@ function Menu() {
         const token = data.token;
         const message = data.message;
 
-        if ( message == 'Wrong email or password' ) {
+        if ( message === 'Email and password are required.') {
             alert("Veuillez remplir les champs de connection ci dessous");
         }
-        if ( message != 'Wrong email or password' ) {
+        if ( message === 'Wrong email or password.' ) {
             alert("vous êtes connecté");
         }
 
