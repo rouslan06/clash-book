@@ -36,12 +36,11 @@
 #titrePost {
   margin-bottom: 1em;
   margin-right: 34em;
-  color: white;
-  background: none;
   width: 300px;
   height: 30px;
   border: none;
   border-bottom: 2px solid rgb(225 225 225 / 52%);
+  font-size: 1.2rem;
 }
 
 input::placeholder{
@@ -64,6 +63,7 @@ textarea{
   width: 53em;
   height: 10em;
   padding: 2em;
+  font-size: 1.2rem;
 }
 
 .btn{
@@ -83,7 +83,7 @@ textarea{
   border: none;
   border-radius: 5px;
   font-family: "Abel";
-  box-shadow: inset 0 0 0 0 #44107aad;
+  box-shadow: inset 0 0 0 0 #ffffffad;
   padding: 0 1rem;
   margin: 0 -0.25rem;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
@@ -91,7 +91,7 @@ textarea{
 
 .send:hover{
   color: #fff;
-  box-shadow: inset 160px 0 0 0 #43107a36;
+  box-shadow: inset 160px 0 0 0 #ffffff36;
 }
 
 .send:active{
@@ -107,7 +107,7 @@ textarea{
   border: none;
   border-radius: 5px;
   font-family: "Abel";
-  box-shadow: inset 0 0 0 0 #44107aad;
+  box-shadow: inset 0 0 0 0 #ffffffad;
   padding: 0 1rem;
   margin: 0 -0.25rem;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
@@ -115,24 +115,22 @@ textarea{
     
 .cancel:hover{
   color: #fff;
-  box-shadow: inset 160px 0 0 0 #43107a36;
+  box-shadow: inset 160px 0 0 0 #ffffff36;
 }
     
 .cancel:active{
   transform: scale(0.95);
 }
 
-
-
 /*partie responsive*/
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
 
-#titrePost {
-  margin-right: 1em;
-}
-
-textarea{
-  width: 20em;
+  #titrePost {
+    margin-right: 1em;
   }
+
+  textarea{
+    width: 20em;
+    }
 }

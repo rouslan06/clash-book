@@ -29,6 +29,13 @@ function Menu() {
         login();
     }
 
+    function UnSubmit() {
+        localStorage.removeItem("token");
+        localStorage.removeItem("userID");
+
+        alert("Vous êtes deconnecté");
+    }
+
     async function login(){
         let options = {
             method: "POST",
@@ -96,36 +103,32 @@ function Menu() {
             {
                 open && <nav id="navigation">
                 <ul>
-                    <li id="style">
-                        <Link to="/"><img src="/Img/maison.png" alt="icone" id="imgstyle" />WELCOME</Link>
+                    <li>
+                        <Link to="/" id="style"><img src="/Img/maison.png" alt="icone" id="imgstyle" />WELCOME</Link>
                     </li>
 
-                    <li id="style">
-                        <Link to="/page1"><img src="/Img/megaphone.png" alt="icone" id="imgstyle" />LE FIL D'ACTU</Link>
+                    <li>
+                        <Link to="/page1" id="style"><img src="/Img/megaphone.png" alt="icone" id="imgstyle" />LE FIL D'ACTU</Link>
                     </li>
 
-                    <li id="style">
-                        <Link to="/page5"><img src="/Img/user.png" alt="icone" id="imgstyle" />PROFIL</Link>
+                    <li>
+                        <Link to="/page5" id="style"><img src="/Img/user.png" alt="icone" id="imgstyle" />PROFIL</Link>
                     </li>
 
-                    <li id="style">
-                     <Link to="/page2"><img src="/Img/document.png" alt="icone" id="imgstyle" /> INSCRIS TOI</Link>
+                    <li>
+                     <Link to="/page2" id="style"><img src="/Img/document.png" alt="icone" id="imgstyle" /> INSCRIS TOI</Link>
                     </li>
 
-                    <li id="style">
-                        <Link to="/page3"><img src="/Img/pencil.png" alt="icone" id="imgstyle" />NEW CLASH</Link>
+                    <li>
+                        <Link to="/page3" id="style"><img src="/Img/pencil.png" alt="icone" id="imgstyle" />NEW CLASH</Link>
                     </li>
 
-                    <li id="style">
-                        <Link to="/page4"><img src="/Img/favorites.png" alt="icone" id="imgstyle" />TES POSTS</Link>
+                    <li>
+                        <Link to="/page4" id="style"><img src="/Img/favorites.png" alt="icone" id="imgstyle" />TES POSTS</Link>
                     </li>
                  
-                    <li id="style">
-                        <Link to="/"><img src="/Img/question.png" alt="icone" id="imgstyle" />FAQ</Link>
-                    </li>
-
-                    <li id="style">
-                        <Link to="/">DECONNEXION</Link>
+                    <li>
+                        <Link to="/" id="style"><img src="/Img/question.png" alt="icone" id="imgstyle" />FAQ</Link>
                     </li>
                 </ul>
 
@@ -136,7 +139,6 @@ function Menu() {
                         placeholder="Email" 
                         value={emailConnect}
                         onChange={onChange}
-                        required
                     />
 
                     <input 
@@ -145,12 +147,19 @@ function Menu() {
                         placeholder="Password"
                         value={passwordConnect}
                         onChange={onChange}
-                        required
                     />
 
                     <input 
                         type="submit" 
                         value="Connexion"
+                        id="submitCo"
+                    />
+                </form>
+                
+                <form id="connect" onSubmit={UnSubmit}>
+                    <input 
+                        type="submit" 
+                        value="Deonnexion"
                         id="submitCo"
                     />
                 </form>

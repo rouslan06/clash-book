@@ -6,7 +6,7 @@
   padding: 3em;
   border-radius: 10px;
   background-color: #ffffff24;
-  width: 25em;
+  width: 34em;
 }
 
 #register form input {
@@ -17,11 +17,14 @@
   box-sizing: border-box;
   border: none;
   border-bottom: 2px solid rgb(134 132 141 / 44%);
+  background-color: white;
+  font-size: 1.5rem;
 }
 
 #register form input::placeholder{
   color: rgba(255, 255, 255, 0.481);
-  font-size: 15px;
+  color: black;
+  font-size: 1.5rem;
 }
 
 #submitClasher{
@@ -144,5 +147,18 @@
 @media screen and (max-width: 900px) {
   #register form {
       width: 13em;
+  }
+
+  #register form {
+    width: 14em;
+  }
+
+  #register form input {
+    width: 11em;
+    font-size: 1.3rem;
+  }
+
+  #register form input::placeholder{
+    font-size: 1rem;
   }
 }

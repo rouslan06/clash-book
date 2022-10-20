@@ -102,4 +102,12 @@
     margin-right: auto;
     width: 420px;
     margin-bottom: 20px;
+    zoom: 150%;
+}
+
+@media screen and (max-width: 900px) {
+
+  #LesPosts {
+    zoom: 100%;
+  }
 }

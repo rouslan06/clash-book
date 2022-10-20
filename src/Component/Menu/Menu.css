@@ -38,15 +38,18 @@
 
 #style{
     font-family: "Abel";
-    box-shadow: inset 0 0 0 0 #44107aad;
-    padding: 0 0.25rem;
-    margin: 0 -0.25rem;
+    box-shadow: inset 0 0 0 0 white;
+    padding: 10px 10px;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+li {
+    margin-bottom: 20px;
 }
 
 #style:hover{
   color: #fff;
-  box-shadow: inset 160px 0 0 0 #43107a36;
+  box-shadow: inset 160px 0 0 0 #ffffff36;
 }
 
 #style{
@@ -97,15 +100,17 @@ form input::placeholder{
     border: none;
     border-radius: 5px;
     font-family: "Abel";
-    box-shadow: inset 0 0 0 0 #44107aad;
+    box-shadow: inset 0 0 0 0 #ffffffad;
     padding: 0 1rem;
-    margin: 15px -0.25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    width: 170px;
+    margin-top: -5px;
+    margin-bottom: 10px;
 }
 
 #submitCo:hover{
   color: #fff;
-  box-shadow: inset 160px 0 0 0 #43107a36;
+  box-shadow: inset 160px 0 0 0 #ffffff36;
 }
 
 
@@ -134,11 +139,10 @@ form input::placeholder{
     }
 
     #style:hover{
-        box-shadow: inset 95px 0 0 0 #43107a36;
+        box-shadow: inset 95px 0 0 0 #ffffff36;
     }
 
     #imgstyle{
-      display: none;
+        display: none;
     }
-
 }
