@@ -11,14 +11,9 @@ function Menu() {
         setOpen(!open);
     }
 
-    //Création des variables à vide
     const [emailConnect, setEmailConnect] = useState("");
     const [passwordConnect, setPasswordConnect] = useState("");
 
-    /**
-     * Fonction qui va permettre de mettre à jour les variables
-     * @param {*} e 
-     */
     function onChange(e){
         const {id, value} = e.target;
         if (id === "emailConnect") {
@@ -29,13 +24,9 @@ function Menu() {
         }
     }
 
-    /**
-     * Fonction qui va permettre à l'utilisateur de se connecter
-     * @param {*} e 
-     */
     function submit(e){
         e.preventDefault();
-        login();//Au click sur le bouton connexion appel de la fonction login
+        login();
     }
 
     function UnSubmit() {
@@ -45,9 +36,6 @@ function Menu() {
         alert("Vous êtes deconnecté");
     }
 
-    /**
-     * Fonction async qui va permettre à l'utilisateur de se connecter
-     */
     async function login(){
         let options = {
             method: "POST",
@@ -66,13 +54,14 @@ function Menu() {
         const data = await response.json();
 
         console.log("dataaaa : ", data)
+        
         const token = data.token;
         const message = data.message;
 
-        if ( message == 'Wrong email or password' ) {
+        if ( message === 'Wrong email or password' ) {
             alert("Veuillez remplir les champs de connection ci dessous");
         }
-        if ( message != 'Wrong email or password' ) {
+        if ( message !== 'Wrong email or password' ) {
             alert("vous êtes connecté");
         }
 
@@ -80,14 +69,11 @@ function Menu() {
 
         localStorage.setItem("token", JSON.stringify(token));
 
-        getID();//Appel de la fonction getID qui va permettre de récupérer les données nécéssaires pour se connecter
+        getID();
     }
 
     // ------------------------------------------------------- //
 
-    /**
-     * Fonction async qui va permettre de récupérer les données de connexion
-     */
     async function getID(){
 
         let token = JSON.parse(localStorage.getItem("token"));
