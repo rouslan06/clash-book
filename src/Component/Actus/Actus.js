@@ -1,6 +1,6 @@
 import "./Actus.css"
 import { useReducer } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Commentaire from "../Commentaire/Commentaire";
 
 
@@ -16,7 +16,7 @@ function countReducer(state, action) {
 
 // affiche une actu 
 
-function Actus({ title, description, comments, index, idPost}){
+function Actus({ title, description, comments, index, idPost, firstname}){
 
     // console.log("commentaire du post : ", comments);
 
@@ -74,7 +74,35 @@ function Actus({ title, description, comments, index, idPost}){
         // console.log("Comentaire envoyé : ", dataID)
 
         setCommentsPost(commentsPost);
+        auteurPost();
     }
+
+    async function auteurPost(){
+        let token = JSON.parse(localStorage.getItem("token"));
+        let userID = JSON.parse(localStorage.getItem("userID"));
+
+        const optionsModif = {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `bearer ${token}`
+            },
+
+            body: JSON.stringify ({
+                firstname: firstname,
+            }),
+        }
+
+        const response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/clash-book/user/${userID}`, optionsModif);
+
+        const data = await response.json();
+        const newMember = data.success;
+
+        console.log("userID : ", newMember);
+        
+    }
+
+    //useEffect(()=>{getComment()},[])
 
     //-----------------------------------------------------------//
     
@@ -82,7 +110,10 @@ function Actus({ title, description, comments, index, idPost}){
     return(
 
         <li className="Actus">
-            <h3>{title}</h3>
+            <div id="auteurPostCenter">
+                <h3 id="auteurPost">Posté par : {firstname}</h3>
+            </div>
+            <h3>Titre : {title}</h3>
             <p>{description}</p>
             <div id="Boutons">
                 <div id="SectionAjout">  

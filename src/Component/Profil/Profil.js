@@ -53,9 +53,6 @@ function Profil() {
         if ( newMember === true ) {
             alert("Clasheur modifié");
         }
-
-
-
     }
 
     function firstnameChange(e){
