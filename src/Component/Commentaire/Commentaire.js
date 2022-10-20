@@ -13,7 +13,7 @@ function countReducer(state, action) {
 
 // ---------------------------------------------------------- //
 
-function Commentaire({ comments, index }) {
+function Commentaire({ comments, index, firstname}) {
 
     // variable d'etat qui compte les likes
     const [count, updateCount] = useReducer(countReducer, 0);
@@ -25,8 +25,7 @@ function Commentaire({ comments, index }) {
             <div id="BlocGauche">
                 <div id="rowP">
                     <div id="AuteurCom">
-                        <p id="Auteur">Clashé par :</p>
-                        <p id="Underline">Coca</p>
+                        <p id="Auteur">Clashé par : { firstname }</p>
                     </div>
                 </div>
                 <div id="Bloc">

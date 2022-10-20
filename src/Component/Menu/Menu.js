@@ -52,6 +52,8 @@ function Menu() {
         const response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/clash-book/login`, options);
     
         const data = await response.json();
+
+        console.log("dataaaa : ", data)
         const token = data.token;
         const message = data.message;
 

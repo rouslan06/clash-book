@@ -73,6 +73,9 @@ function Actus({ title, description, comments, index, idPost, firstname}){
         // verification si envoyé
         // console.log("Comentaire envoyé : ", dataID)
 
+        alert("Clash posté");
+
+
         setCommentsPost(commentsPost);
         auteurPost();
     }
@@ -111,7 +114,7 @@ function Actus({ title, description, comments, index, idPost, firstname}){
 
         <li className="Actus">
             <div id="auteurPostCenter">
-                <h3 id="auteurPost">Posté par : {firstname}</h3>
+                <h3 id="auteurPost">Posté par : { firstname }</h3>
             </div>
             <h3>Titre : {title}</h3>
             <p id="content">{description}</p>
@@ -130,7 +133,8 @@ function Actus({ title, description, comments, index, idPost, firstname}){
                 {comments.map((postCom, index) => <Commentaire 
                     key={index} 
                     index={index}
-                    comments={postCom}/>
+                    comments={postCom}
+                    firstname={postCom.firstname}/>
                 )}
             </ul>
         </li>
