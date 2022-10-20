@@ -56,12 +56,12 @@ function Menu() {
         console.log("dataaaa : ", data)
         
         const token = data.token;
-        const message = data.message;
+        const success = data.success;
 
-        if ( message === 'Wrong email or password' ) {
+        if ( success === false ) {
             alert("Veuillez remplir les champs de connection ci dessous");
         }
-        if ( message !== 'Wrong email or password' ) {
+        if ( success === true ) {
             alert("vous êtes connecté");
         }
 
