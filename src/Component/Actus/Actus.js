@@ -111,6 +111,7 @@ function Actus({ title, description, comments, index, idPost, firstname}){
     
 
     return(
+        <div>
 
         <li className="Actus">
             <div id="auteurPostCenter">
@@ -129,6 +130,7 @@ function Actus({ title, description, comments, index, idPost, firstname}){
                     <button id="Dislike" onClick={() => updateCount("decrement")}>👎</button>
                 </div>
             </div>
+        </li>
             <ul id="colonneCom">
                 {comments.map((postCom, index) => <Commentaire 
                     key={index} 
@@ -137,7 +139,7 @@ function Actus({ title, description, comments, index, idPost, firstname}){
                     firstname={postCom.firstname}/>
                 )}
             </ul>
-        </li>
+        </div>
     )
 }
 

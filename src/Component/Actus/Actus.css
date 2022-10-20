@@ -6,8 +6,6 @@
     border-radius: 10px;
     margin-left: -25px;
     box-shadow: #5E5DF0 0 10px 20px -10px;
-    height: 400px;
-    overflow: auto;
 }
 
 #auteurTilte{
@@ -187,4 +185,13 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 17px;
+}
+
+#colonneCom{
+    background: white;
+    width: 90%;
+    width: 400px;
+    border-radius: 5px;
+    height: 370px;
+    overflow: auto;
 }
