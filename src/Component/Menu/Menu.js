@@ -100,7 +100,6 @@ function Menu() {
     return (
         <div className="menu-container">
             <div className="menu-trigger" onClick={openClick}>
-                {/* <img src="/Img/Me.png" alt="image menu" /> */}
                 <span id="menu-text">M E N U</span>
             </div>
             {

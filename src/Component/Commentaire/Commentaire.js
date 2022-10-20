@@ -21,6 +21,7 @@ function Commentaire({ comments, index, firstname}) {
     //console.log("comments :", comments, " | ", "key :",index);
 
     return (
+        <div>
         <li id="BlocCom">
             <div id="BlocGauche">
                 <div id="rowP">
@@ -38,6 +39,8 @@ function Commentaire({ comments, index, firstname}) {
                 </div>
             </div>
         </li>
+        </div>
+       
     )
 }
 
