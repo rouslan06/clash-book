@@ -113,7 +113,7 @@ function Actus({ title, description, comments, index, idPost, firstname}){
             <div id="auteurPostCenter">
                 <h3 id="auteurPost">Posté par : {firstname}</h3>
             </div>
-            <h3>Titre : {title}</h3>
+            <span id="auteurTilte">Titre : {title}</span>
             <p id="content">{description}</p>
             <div id="Boutons">
                 <div id="SectionAjout">  

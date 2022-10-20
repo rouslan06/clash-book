@@ -6,15 +6,17 @@
 #position{
     display: flex;
     justify-content: center;
-    margin-top: -3em;
-    margin-bottom: 10em;
+    margin-top: -12em;
+    margin-bottom: 17em;
 }
 
 /*effet glitch pour le bouton entrer*/
 
 #glitch{
+    font-family: 'Abel';
+    letter-spacing: 6px;
    color: #efefef;
-   font-size: 2em;
+   font-size: 27px;
    background: #16172466;
    padding: 2rem 5rem;
    border-radius: 1.3rem;

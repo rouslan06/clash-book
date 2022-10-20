@@ -129,7 +129,6 @@
     padding-top: 5px;
     margin-left: -30px;
     font-weight: bold;
-    box-shadow: #5E5DF0 0 10px 20px -10px;
 }
 
 #lesLikesPost {
@@ -166,16 +165,23 @@
 }
 
 #auteurPost {
-    color: rgb(200, 23, 23);
-    margin-top: 0px;
-    border: 1px solid black;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.803);
+    margin-top: 0px;;
     width: 185px;
     border-radius: 5px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 17px;
+}
+
+#auteurTilte{
+    font-size: 15px;
+    text-transform: uppercase;
 }
 
 #content {
-    margin-top: 0px;
+    margin-top: 10px;
 }
