@@ -3,6 +3,8 @@ import "./Page4.css";
 import { useEffect, useState } from "react";
 import Actus from "../../Component/Actus/Actus";
 
+// repris de la page 1 Rouslan
+
 
 // Creation de la fonction Page4
 
