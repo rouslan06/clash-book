@@ -112,25 +112,24 @@ function Actus({ title, description, comments, index, idPost, firstname}){
 
     return(
         <div>
-
-        <li className="Actus">
-            <div id="auteurPostCenter">
-                <h3 id="auteurPost">Posté par : { firstname }</h3>
-            </div>
-            <span id="auteurTilte">Titre : {title}</span>
-            <p id="content">{description}</p>
-            <div id="Boutons">
-                <div id="SectionAjout">  
-                    <button id="addCom" onClick={handleSubmit}>#</button>
-                    <input id="Commentaire" onChange={handleCom} placeholder="Trash talkez"></input> 
+            <li className="Actus">
+                <div id="auteurPostCenter">
+                    <h3 id="auteurPost">Posté par : { firstname }</h3>
                 </div>
-                <div id="lesLikesPost">
-                    <button id="Like" onClick={() => updateCount("increment")}>👍</button>
-                    <p id="likeTotal">{count} ❤️</p>
-                    <button id="Dislike" onClick={() => updateCount("decrement")}>👎</button>
+                <span id="auteurTilte">Titre : {title}</span>
+                <p id="content">{description}</p>
+                <div id="Boutons">
+                    <div id="SectionAjout">  
+                        <button id="addCom" onClick={handleSubmit}>#</button>
+                        <input id="Commentaire" onChange={handleCom} placeholder="Trash talkez"></input> 
+                    </div>
+                    <div id="lesLikesPost">
+                        <button id="Like" onClick={() => updateCount("increment")}>👍</button>
+                        <p id="likeTotal">{count} ❤️</p>
+                        <button id="Dislike" onClick={() => updateCount("decrement")}>👎</button>
+                    </div>
                 </div>
-            </div>
-        </li>
+            </li>
             <ul id="colonneCom">
                 {comments.map((postCom, index) => <Commentaire 
                     key={index} 

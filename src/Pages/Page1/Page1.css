@@ -20,7 +20,7 @@
   outline: transparent;
   position: relative;
   touch-action: manipulation;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 #titre:after{
